@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export default function TopNavbarSection() {
   return (
-    <header>
+    <header className="border-b  border-foreground/25 border-dashed">
       <nav
-        className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-10 flex min-h-18 items-center justify-between gap-3 border-b border-foreground/25 md:min-h-16"
+        className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-10 flex min-h-18 items-center justify-between gap-3 border-x border-dashed border-foreground/25 md:min-h-16"
         aria-label="Primary navigation"
       >
         <Link

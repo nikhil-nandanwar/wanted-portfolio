@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function BottomFooterSection() {
   return (
     <footer
-      className="mx-auto w-full max-w-6xl border-t border-foreground/25 px-4 pt-24 pb-9 sm:px-6 lg:px-10 lg:pt-36"
+      className="mx-auto w-full max-w-6xl border-x border-t border-dashed border-foreground/25 px-4 pt-24 pb-9 sm:px-6 lg:px-10 lg:pt-36"
       id="contact"
     >
       <h2 className="m-0 text-xs leading-normal tracking-widest uppercase text-foreground/60">Have a project in mind?</h2>

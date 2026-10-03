@@ -1,7 +1,7 @@
 export default function AboutSection() {
   return (
     <section
-      className="mx-auto w-full max-w-6xl border-t border-foreground/25 px-4 py-24 sm:px-6 lg:px-10 lg:py-36"
+      className="mx-auto w-full max-w-6xl border-x border-t border-dashed border-foreground/25 px-4 py-24 sm:px-6 lg:px-10 lg:py-36"
       id="about"
       aria-labelledby="about-heading"
     >

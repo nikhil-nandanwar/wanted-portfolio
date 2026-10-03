@@ -1,7 +1,7 @@
 export default function TopHeroSection() {
   return (
     <section
-      className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-10 flex min-h-[calc(100svh-5rem)] flex-col justify-between pt-16 pb-10 md:min-h-[calc(100vh-4rem)] md:pt-12 md:pb-16 lg:pt-20"
+      className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-10 flex min-h-[calc(100svh-5rem)] flex-col justify-between pt-16 pb-10 md:min-h-[calc(100vh-4rem)] md:pt-12 md:pb-16 lg:pt-20 border-x border-dashed border-foreground/25 "
       id="top"
       aria-labelledby="hero-heading"
     >
