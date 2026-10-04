@@ -12,7 +12,7 @@ const experience = [
 export default function ExperienceSection() {
   return (
     <section
-      className="mx-auto w-full max-w-6xl border-x border-t border-dashed border-foreground/25 px-4 py-24 sm:px-6 lg:px-10 lg:py-36"
+      className="mx-auto w-full max-w-6xl border-x border-t border-dashed border-foreground/25 px-4 py-16 sm:px-6 sm:py-24 lg:px-10 lg:py-36"
       id="experience"
       aria-labelledby="experience-heading"
     >
@@ -21,7 +21,7 @@ export default function ExperienceSection() {
           <p className="m-0 text-xs leading-normal tracking-widest uppercase text-foreground/60">Experience</p>
           <h2
             id="experience-heading"
-            className="mt-6 max-w-sm text-section-lead font-medium tracking-heading"
+              className="mt-6 max-w-sm text-3xl font-medium leading-tight tracking-tight sm:text-4xl md:text-5xl"
           >
             Building with intent, from idea to interface.
           </h2>
@@ -37,7 +37,7 @@ export default function ExperienceSection() {
                 {item.period}
               </p>
               <div className="sm:col-span-2">
-                <h3 className="m-0 text-item-title tracking-title">
+                <h3 className="m-0 text-xl font-medium leading-tight tracking-tight sm:text-2xl">
                   {item.role}
                 </h3>
                 <p className="mt-2 mb-5 text-xs tracking-wide uppercase text-foreground/60">

@@ -30,19 +30,19 @@ const projects = [
 export default function ProjectDisplaySection() {
   return (
     <section
-      className="mx-auto w-full max-w-6xl border-x border-t border-dashed border-foreground/25 px-4 py-24 sm:px-6 lg:px-10 lg:py-36"
+      className="mx-auto w-full max-w-6xl border-x border-t border-dashed border-foreground/25 px-4 py-16 sm:px-6 sm:py-24 lg:px-10 lg:py-36"
       id="work"
       aria-labelledby="work-heading"
     >
-      <div className="mb-14 flex justify-between">
+      <div className="mb-10 flex items-start justify-between gap-4 sm:mb-14">
         <h2 id="work-heading" className="m-0 text-xs leading-normal tracking-widest uppercase text-foreground/60">Selected work</h2>
-        <p className="m-0 text-xs text-foreground/60">2024 — 2026</p>
+        {/* <p className="m-0 text-xs text-foreground/60">2024 — 2026</p> */}
       </div>
       <div>
         {projects.map((project) => (
-          <article className="border-t border-foreground/25 last:border-b" key={project.number}>
+          <article className="border-t border-foreground/25 last:border-b hover:bg-hover- " key={project.number}>
             <Link
-              className="group grid min-h-11 grid-cols-12 items-center gap-x-3 gap-y-6 py-9 md:gap-6"
+              className="group grid min-h-11 grid-cols-12 items-center gap-x-2 gap-y-5 py-7 sm:gap-x-3 sm:py-9 md:gap-6"
               href={project.href}
               target="_blank"
               rel="noopener noreferrer"
@@ -51,7 +51,7 @@ export default function ProjectDisplaySection() {
                 {project.number}
               </span>
               <div className="col-span-11 min-w-0 md:col-span-6">
-                <h3 className="mt-0 mb-3 text-item-title tracking-title wrap-anywhere">
+                <h3 className="mt-0 mb-3 text-xl font-medium leading-tight tracking-tight wrap-anywhere sm:text-2xl">
                   {project.title}
                   <span className="sr-only"> (opens in a new tab)</span>
                 </h3>

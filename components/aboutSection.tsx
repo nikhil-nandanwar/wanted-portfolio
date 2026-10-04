@@ -1,13 +1,13 @@
 export default function AboutSection() {
   return (
     <section
-      className="mx-auto w-full max-w-6xl border-x border-t border-dashed border-foreground/25 px-4 py-24 sm:px-6 lg:px-10 lg:py-36"
+      className="mx-auto w-full max-w-6xl border-x border-t border-dashed border-foreground/25 px-4 py-16 sm:px-6 sm:py-24 lg:px-10 lg:py-36"
       id="about"
       aria-labelledby="about-heading"
     >
       <p className="m-0 text-xs leading-normal tracking-widest uppercase text-foreground/60">About me</p>
-      <div className="mt-16 grid gap-12 md:grid-cols-5 md:gap-16 lg:gap-28">
-        <h2 id="about-heading" className="m-0 max-w-3xl text-section-title font-medium tracking-heading wrap-anywhere md:col-span-3">
+      <div className="mt-10 grid gap-10 sm:mt-16 sm:gap-12 md:grid-cols-5 md:gap-16 lg:gap-28">
+        <h2 id="about-heading" className="m-0 max-w-3xl text-3xl font-medium leading-tight tracking-tight wrap-anywhere sm:text-4xl md:col-span-3 md:text-5xl">
           I care about the space between useful and memorable.
         </h2>
         <div className="max-w-lg md:col-span-2">

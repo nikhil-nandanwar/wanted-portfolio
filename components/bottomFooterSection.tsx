@@ -4,12 +4,12 @@ import Link from "next/link";
 export default function BottomFooterSection() {
   return (
     <footer
-      className="mx-auto w-full max-w-6xl border-x border-t border-dashed border-foreground/25 px-4 pt-24 pb-9 sm:px-6 lg:px-10 lg:pt-36"
+      className="mx-auto w-full max-w-6xl border-x border-t border-dashed border-foreground/25 px-4 pt-16 pb-9 sm:px-6 sm:pt-24 lg:px-10 lg:pt-36"
       id="contact"
     >
       <h2 className="m-0 text-xs leading-normal tracking-widest uppercase text-foreground/60">Have a project in mind?</h2>
       <Link
-        className="my-7 mb-20 flex min-h-11 items-center justify-between gap-4 border-b-2 border-foreground pb-7 text-section-title tracking-heading wrap-anywhere md:mb-28"
+        className="my-7 mb-16 flex min-h-11 items-end justify-between gap-4 border-b-2 border-foreground pb-5 text-3xl font-medium leading-tight tracking-tight wrap-anywhere sm:text-4xl sm:pb-7 md:mb-28 md:text-5xl"
         href="mailto:nikhilnandanwar429@gmail.com"
       >
         Let&apos;s work together{" "}

@@ -4,7 +4,6 @@ import ExperienceSection from "@/components/experienceSection";
 import ProjectDisplaySection from "@/components/projectsDisplaySection";
 import TopHeroSection from "@/components/topHeroSection";
 import TopNavbarSection from "@/components/topNavbarSection";
-import Image from "next/image";
 
 export default function Home() {
   return (
