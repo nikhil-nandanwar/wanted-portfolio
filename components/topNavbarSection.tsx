@@ -5,7 +5,7 @@ export default function TopNavbarSection() {
   return (
     <header className="fixed  w-full border-b border-foreground/25 border-dashed bg-background">
       <nav
-        className="mx-auto flex min-h-16 w-full max-w-6xl items-center justify-between gap-2 border-x border-dashed border-foreground/25 px-3 sm:min-h-18 sm:gap-3 sm:px-6 md:min-h-16 lg:px-10"
+        className="mx-auto flex min-h-16 w-full  items-center justify-between gap-2 border-x border-dashed border-foreground/25 px-3 sm:min-h-18 sm:gap-3 sm:px-6 md:min-h-16 lg:px-10"
         aria-label="Primary navigation"
       >
         <Link

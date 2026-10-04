@@ -12,16 +12,17 @@ const experience = [
 export default function ExperienceSection() {
   return (
     <section
-      className="mx-auto w-full max-w-6xl border-x border-t border-dashed border-foreground/25 px-4 py-16 sm:px-6 sm:py-24 lg:px-10 lg:py-36"
+      className="mx-auto w-full flex justify-center border-y border-t border-dashed border-foreground/25"
       id="experience"
       aria-labelledby="experience-heading"
     >
-      <div className="grid gap-14 md:grid-cols-5 md:gap-16 lg:gap-28">
+      {/* border-x border-dashed border-foreground/25 px-4 py-16 sm:px-6 sm:py-24 lg:px-10 lg:py-36 */}
+      <div className="grid gap-14 md:grid-cols-5 md:gap-16 lg:gap-28  border-x border-dashed border-foreground/25 px-4 py-16 sm:px-6 sm:py-24 lg:px-10 lg:py-36">
         <div className="md:col-span-2">
           <p className="m-0 text-xs leading-normal tracking-widest uppercase text-foreground/60">Experience</p>
           <h2
             id="experience-heading"
-              className="mt-6 max-w-sm text-3xl font-medium leading-tight tracking-tight sm:text-4xl md:text-5xl"
+              className="mt-6  text-3xl font-medium leading-tight tracking-tight sm:text-4xl md:text-5xl"
           >
             Building with intent, from idea to interface.
           </h2>
@@ -43,7 +44,7 @@ export default function ExperienceSection() {
                 <p className="mt-2 mb-5 text-xs tracking-wide uppercase text-foreground/60">
                   {item.company}
                 </p>
-                <p className="m-0 max-w-xl leading-7 text-foreground/70">
+                <p className="m-0  leading-7 text-foreground/70">
                   {item.description}
                 </p>
                 <ul
