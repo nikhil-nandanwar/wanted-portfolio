@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #f0efef;
   --foreground: #0a0a0a;
-  --hover: #b8afaf;
+  --hover: #f0f0f0;
 
 }
 
@@ -15,11 +15,11 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-    --hover: #8a7b7b;
+    --hover: #0f0f0f;
 
   }
 }

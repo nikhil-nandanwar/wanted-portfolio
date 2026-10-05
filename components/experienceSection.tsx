@@ -12,12 +12,12 @@ const experience = [
 export default function ExperienceSection() {
   return (
     <section
-      className="mx-auto w-full flex justify-center border-y border-t border-dashed border-foreground/25"
+      className="mx-auto w-full scroll-mt-16 flex justify-center border-y border-t border-dashed border-foreground/25"
       id="experience"
       aria-labelledby="experience-heading"
     >
       {/* border-x border-dashed border-foreground/25 px-4 py-16 sm:px-6 sm:py-24 lg:px-10 lg:py-36 */}
-      <div className="grid gap-14 md:grid-cols-5 md:gap-16 lg:gap-28  border-x border-dashed border-foreground/25 px-4 py-16 sm:px-6 sm:py-24 lg:px-10 lg:py-36">
+      <div className="grid w-full max-w-7xl gap-14 border-x border-dashed border-foreground/25 px-4 py-16 sm:px-6 sm:py-24 md:grid-cols-5 md:gap-16 lg:gap-28 lg:py-36">
         <div className="md:col-span-2">
           <p className="m-0 text-xs leading-normal tracking-widest uppercase text-foreground/60">Experience</p>
           <h2

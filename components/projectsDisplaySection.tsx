@@ -30,11 +30,11 @@ const projects = [
 export default function ProjectDisplaySection() {
   return (
     <section
-      className=" w-full flex justify-center border-y border-t border-dashed border-foreground/25 "
+      className="w-full scroll-mt-16 flex justify-center border-y border-t border-dashed border-foreground/25"
       id="work"
       aria-labelledby="work-heading"
     >
-      <div className=" border-x border-dashed border-foreground/25 px-4 py-16 sm:px-6 sm:py-24 lg:px-10 lg:py-36">
+      <div className="w-full max-w-7xl border-x border-dashed border-foreground/25 px-4 py-16 sm:px-6 sm:py-24 lg:px-10 lg:py-36">
         <div className="mb-10 flex items-start justify-between gap-4 sm:mb-14">
           <h2 id="work-heading" className="m-0 text-xs leading-normal tracking-widest uppercase text-foreground/60">Selected work</h2>
           {/* <p className="m-0 text-xs text-foreground/60">2024 — 2026</p> */}

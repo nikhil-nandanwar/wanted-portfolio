@@ -4,10 +4,10 @@ import Link from "next/link";
 export default function BottomFooterSection() {
   return (
     <footer
-      className="mx-auto w-full flex justify-center border-y border-t border-dashed border-foreground/25"
+      className="mx-auto w-full scroll-mt-16 flex justify-center border-y border-t border-dashed border-foreground/25"
       id="contact"
     >
-      <div className=" border-x border-t border-dashed border-foreground/25 px-4 pt-16 pb-9 sm:px-6 sm:pt-24 lg:px-10 lg:pt-36">
+      <div className="w-full max-w-7xl border-x border-dashed border-foreground/25 px-4 py-16 sm:px-6 sm:py-24 lg:px-10 lg:py-36">
 
         <h2 className="m-0 text-xs leading-normal tracking-widest uppercase text-foreground/60">Have a project in mind?</h2>
         <Link
