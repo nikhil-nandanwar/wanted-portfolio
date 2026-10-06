@@ -7,9 +7,8 @@ export default function TopHeroSection() {
       aria-labelledby="hero-heading"
     >
       <div className="w-full max-w-7xl border-x border-dashed border-foreground/25 px-4 py-16 sm:px-6 sm:py-24 lg:px-10 lg:py-36">
-
-        <p className="mt-12 md:mt-4 text-xs leading-normal tracking-widest uppercase text-foreground/60">
-          Designer &amp; developer · India
+        <p className="mt-12 text-xs uppercase tracking-widest text-foreground/60 md:mt-4">
+          Full Stack Developer · India
         </p>
         <h1
           id="hero-heading"
@@ -27,16 +26,12 @@ export default function TopHeroSection() {
             interactions.
           </p>
           <Link
-            className="flex min-h-11 items-center border-b border-foreground text-xs tracking-wide whitespace-nowrap uppercase"
-            href="#work"
+            className="flex min-h-11 items-center border-b border-foreground text-xs uppercase tracking-wide whitespace-nowrap"
+            href="#projects"
           >
-            Explore my work{" "}
-            <span className="ml-6" aria-hidden="true">
-              ↓
-            </span>
+            Explore my work <span className="ml-6" aria-hidden="true">↓</span>
           </Link>
         </div>
-
       </div>
     </section>
   );

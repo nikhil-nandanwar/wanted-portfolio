@@ -33,6 +33,7 @@ export default function BottomFooterSection() {
             >
               GitHub<span className="sr-only"> (opens in a new tab)</span>
             </Link>
+            <Link className="text-xs uppercase transition-opacity hover:opacity-60" href="https://x.com/nixhil_" target="_blank" rel="noopener noreferrer">X</Link>
             <Link
               className="text-xs tracking-wide uppercase transition-opacity hover:opacity-60"
               href="https://www.linkedin.com/in/nandanwar-nikhil"

@@ -1,6 +1,4 @@
 import Link from "next/link";
-// import { ModeToggle } from "./theme/theme-toggle-button";
-
 export default function TopNavbarSection() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 w-full border-b border-dashed border-foreground/25 bg-background">
@@ -16,20 +14,21 @@ export default function TopNavbarSection() {
           NN<span className="opacity-45">.</span>
         </Link>
         <div className="flex min-w-0 items-center gap-0 sm:gap-4 md:gap-8 lg:gap-12">
-          <Link className="flex min-h-11 items-center px-1 text-[0.625rem] tracking-wide uppercase transition-opacity hover:opacity-60 sm:text-xs" href="#work">
-            Work
-          </Link>
-          <Link className="flex min-h-11 items-center px-1 text-[0.625rem] tracking-wide uppercase transition-opacity hover:opacity-60 sm:text-xs" href="#experience">
-            Experience
-          </Link>
           <Link className="flex min-h-11 items-center px-1 text-[0.625rem] tracking-wide uppercase transition-opacity hover:opacity-60 sm:text-xs" href="#about">
             About
           </Link>
-          <Link className="flex min-h-11 items-center px-1 text-[0.625rem] tracking-wide uppercase transition-opacity hover:opacity-60 sm:text-xs" href="#contact">
-            Contact
+          <Link className="flex min-h-11 items-center px-1 text-[0.625rem] tracking-wide uppercase transition-opacity hover:opacity-60 sm:text-xs" href="#skills">
+            Skills
           </Link>
-
-          {/* <ModeToggle /> */}
+          <Link className="flex min-h-11 items-center px-1 text-[0.625rem] tracking-wide uppercase transition-opacity hover:opacity-60 sm:text-xs" href="#projects">
+            Projects
+          </Link>
+          <Link className="flex min-h-11 items-center px-1 text-[0.625rem] tracking-wide uppercase transition-opacity hover:opacity-60 sm:text-xs" href="https://blogs.nixhil.dev/" target="_blank" rel="noopener noreferrer">
+            Blog
+          </Link>
+          <Link className="hidden min-h-11 items-center px-1 text-[0.625rem] tracking-wide uppercase transition-opacity hover:opacity-60 sm:flex sm:text-xs" href="https://drive.google.com/file/d/1MORUESGlncs5203DXM_q7Sq6imkNaXYK/view" target="_blank" rel="noopener noreferrer">
+            Resume
+          </Link>
         </div>
       </nav>
     </header>
