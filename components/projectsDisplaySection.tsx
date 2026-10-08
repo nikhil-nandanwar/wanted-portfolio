@@ -78,10 +78,28 @@ export default function ProjectDisplaySection() {
                       </li>
                     ))}
                   </ul>
-                </div>
-                <div className="col-start-2 flex gap-4 lg:col-start-auto lg:flex-col lg:justify-center">
-                  <Link className="text-xs uppercase underline underline-offset-4" href={project.code} target="_blank" rel="noopener noreferrer">Code</Link>
-                  <Link className="text-xs uppercase underline underline-offset-4" href={project.href} target="_blank" rel="noopener noreferrer">Live demo</Link>
+                  <div className="mt-8 flex flex-wrap items-center gap-3">
+                    <Link
+                      className="inline-flex min-h-10 items-center justify-center border border-foreground/35 px-4 text-xs font-medium tracking-wide uppercase transition-colors hover:border-foreground hover:bg-foreground hover:text-background focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+                      href={project.code}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Code
+                      <span className="ml-2 text-sm" aria-hidden="true">↗</span>
+                      <span className="sr-only"> (opens in a new tab)</span>
+                    </Link>
+                    <Link
+                      className="inline-flex min-h-10 items-center justify-center bg-foreground px-4 text-xs font-medium tracking-wide uppercase text-background transition-opacity hover:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+                      href={project.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Live demo
+                      <span className="ml-2 text-sm" aria-hidden="true">↗</span>
+                      <span className="sr-only"> (opens in a new tab)</span>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </article>
