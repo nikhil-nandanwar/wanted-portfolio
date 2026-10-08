@@ -2,9 +2,9 @@ const experience = [
   {
     period: "Jul 2026 - Sep 2026",
     role: "Full Stack Developer Intern",
-    company: "Nabham Tech ",
+    company: "Nabham Tech",
     description:
-      "Designed and develope a website and created mobile app for rcording videos using app, with handling the backend for admin panel",
+      "Designed and developed a website and mobile app for recording videos, while also handling the admin panel backend.",
     focus: ["NextJS", "React Native", "Docker"],
   },
   {
@@ -18,7 +18,7 @@ const experience = [
   {
     period: "Jun 2025 - Oct 2025",
     role: "Frontend Developer Intern",
-    company: "Living Pixel Labs ",
+    company: "Living Pixel Labs",
     description:
       "Developed the company’s official website and mobile app for the AI chat interface.",
     focus: ["Product design", "Front-end", "Reactjs", "React Native"],

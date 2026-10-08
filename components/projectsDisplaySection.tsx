@@ -58,12 +58,12 @@ export default function ProjectDisplaySection() {
                   alt={project.title}
                   width={1920}
                   height={892}
+                  sizes="(min-width: 1024px) 38vw, 100vw"
                   className="col-start-2 aspect-video h-auto w-full rounded object-cover lg:col-start-auto"
                 />
                 <div className="col-start-2 min-w-0 lg:col-start-auto">
                   <h3 className="mt-0 mb-3 text-xl font-medium leading-tight tracking-tight wrap-anywhere sm:text-2xl">
                     {project.title}
-                    <span className="sr-only"> (opens in a new tab)</span>
                   </h3>
                   <p className="m-0 leading-7 text-foreground/65">
                     {project.description}
@@ -87,7 +87,7 @@ export default function ProjectDisplaySection() {
                     >
                       Code
                       <span className="ml-2 text-sm" aria-hidden="true">↗</span>
-                      <span className="sr-only"> (opens in a new tab)</span>
+                      <span className="sr-only"> for {project.title} (opens in a new tab)</span>
                     </Link>
                     <Link
                       className="inline-flex min-h-10 items-center justify-center bg-foreground px-4 text-xs font-medium tracking-wide uppercase text-background transition-opacity hover:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
@@ -97,7 +97,7 @@ export default function ProjectDisplaySection() {
                     >
                       Live demo
                       <span className="ml-2 text-sm" aria-hidden="true">↗</span>
-                      <span className="sr-only"> (opens in a new tab)</span>
+                      <span className="sr-only"> for {project.title} (opens in a new tab)</span>
                     </Link>
                   </div>
                 </div>
