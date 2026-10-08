@@ -8,12 +8,13 @@ export default function TopHeroSection() {
     >
       <div className="w-full max-w-7xl border-x border-dashed border-foreground/25 px-4 py-16 sm:px-6 sm:py-24 lg:px-10 lg:py-36">
         <p className="mt-12 text-xs uppercase tracking-widest text-foreground/60 md:mt-4">
-          Full Stack Developer · India
+          Nikhil Nandanwar · Full Stack Developer · India
         </p>
         <h1
           id="hero-heading"
           className="my-20 mb-12 text-5xl font-semibold leading-[0.98]  wrap-anywhere  sm:mb-16 sm:text-6xl md:mb-10 md:text-7xl lg:text-8xl"
         >
+          <span className="sr-only">Nikhil Nandanwar, full stack developer: </span>
           I build digital
           <span className="block text-transparent [-webkit-text-stroke:1px_var(--foreground)] md:[-webkit-text-stroke-width:1.5px]">
             experiences that feel right.

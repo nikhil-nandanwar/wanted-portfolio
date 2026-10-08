@@ -55,7 +55,7 @@ export default function ProjectDisplaySection() {
                 </span>
                 <Image
                   src={project.image}
-                  alt={project.title}
+                  alt={`Screenshot of ${project.title}`}
                   width={1920}
                   height={892}
                   sizes="(min-width: 1024px) 38vw, 100vw"

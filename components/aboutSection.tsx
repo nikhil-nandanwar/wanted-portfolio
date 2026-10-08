@@ -22,6 +22,12 @@ export default function AboutSection() {
               collecting visual references, or learning something I can bring into
               the next project.
             </p>
+            <p className="mt-0 mb-6 leading-7 text-foreground/70">
+              Nikhil Nandanwar is a full stack developer from India who builds web
+              and mobile applications with React, Next.js, Node.js, MongoDB,
+              Angular and .NET, and has worked as an intern at Nabham Tech,
+              Cognizant and Living Pixel Labs.
+            </p>
           </div>
         </div>
       </div>

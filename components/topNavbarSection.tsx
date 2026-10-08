@@ -23,6 +23,9 @@ export default function TopNavbarSection() {
           <Link className="flex min-h-11 items-center px-1 text-[0.625rem] tracking-wide uppercase transition-opacity hover:opacity-60 sm:text-xs" href="#projects">
             Projects
           </Link>
+          <Link className="hidden min-h-11 items-center px-1 text-[0.625rem] tracking-wide uppercase transition-opacity hover:opacity-60 sm:flex sm:text-xs" href="#contact">
+            Contact
+          </Link>
           <Link className="flex min-h-11 items-center px-1 text-[0.625rem] tracking-wide uppercase transition-opacity hover:opacity-60 sm:text-xs" href="https://blogs.nixhil.dev/" target="_blank" rel="noopener noreferrer">
             Blog
           </Link>

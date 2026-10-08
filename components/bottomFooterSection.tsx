@@ -51,7 +51,7 @@ export default function BottomFooterSection() {
                   className="text-xs tracking-wide uppercase transition-opacity hover:opacity-60"
                   href={footerlink.link}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="me noopener noreferrer"
                 >
                   {footerlink.name}<span className="sr-only"> (opens in a new tab)</span>
                 </Link>

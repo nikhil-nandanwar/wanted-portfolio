@@ -1,6 +1,10 @@
 const experience = [
   {
     period: "Jul 2026 - Sep 2026",
+    start: "2026-07",
+    end: "2026-09",
+    startLabel: "Jul 2026",
+    endLabel: "Sep 2026",
     role: "Full Stack Developer Intern",
     company: "Nabham Tech",
     description:
@@ -9,6 +13,10 @@ const experience = [
   },
   {
     period: "Feb 2026 - May 2026",
+    start: "2026-02",
+    end: "2026-05",
+    startLabel: "Feb 2026",
+    endLabel: "May 2026",
     role: "Full Stack Engineer Intern",
     company: "Cognizant",
     description:
@@ -17,6 +25,10 @@ const experience = [
   },
   {
     period: "Jun 2025 - Oct 2025",
+    start: "2025-06",
+    end: "2025-10",
+    startLabel: "Jun 2025",
+    endLabel: "Oct 2025",
     role: "Frontend Developer Intern",
     company: "Living Pixel Labs",
     description:
@@ -51,7 +63,8 @@ export default function ExperienceSection() {
               key={`${item.company}-${item.role}-${item.period}`}
             >
               <p className="m-0 text-xs tracking-wide uppercase text-foreground/60">
-                {item.period}
+                <time dateTime={item.start}>{item.startLabel}</time> -{" "}
+                <time dateTime={item.end}>{item.endLabel}</time>
               </p>
               <div className="sm:col-span-2">
                 <h3 className="m-0 text-xl font-medium leading-tight tracking-tight sm:text-2xl">
