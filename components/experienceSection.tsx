@@ -1,11 +1,27 @@
 const experience = [
   {
-    period: "2024 — Present",
-    role: "Designer & Developer",
-    company: "Independent",
+    period: "Jul 2026 - Sep 2026",
+    role: "Full Stack Developer Intern",
+    company: "Nabham Tech ",
     description:
-      "Designing and building focused digital products from early concepts through polished, responsive interfaces.",
-    focus: ["Product design", "Front-end", "Design systems"],
+      "Designed and develope a website and created mobile app for rcording videos using app, with handling the backend for admin panel",
+    focus: ["NextJS", "React Native", "Docker"],
+  },
+  {
+    period: "Feb 2026 - May 2026",
+    role: "Full Stack Engineer Intern",
+    company: "Cognizant",
+    description:
+      "Created a Insurance Underwriting related project, implementing Role Based Access Control",
+    focus: ["Angular", "C#", ".NET", "Microservices", "RBAC"],
+  },
+  {
+    period: "Jun 2025 - Oct 2025",
+    role: "Frontend Developer Intern",
+    company: "Living Pixel Labs ",
+    description:
+      "Developed the company’s official website and mobile app for the AI chat interface.",
+    focus: ["Product design", "Front-end", "Reactjs", "React Native"],
   },
 ];
 
@@ -18,11 +34,11 @@ export default function ExperienceSection() {
     >
       {/* border-x border-dashed border-foreground/25 px-4 py-16 sm:px-6 sm:py-24 lg:px-10 lg:py-36 */}
       <div className="grid w-full max-w-7xl gap-14 border-x border-dashed border-foreground/25 px-4 py-16 sm:px-6 sm:py-24 md:grid-cols-5 md:gap-16 lg:gap-28 lg:py-36">
-        <div className="md:col-span-2">
+        <div className="md:col-span-2 md:self-start md:sticky md:top-[40vh] md:mt-20 md:-translate-y-1/2">
           <p className="m-0 text-xs leading-normal tracking-widest uppercase text-foreground/60">Experience</p>
           <h2
             id="experience-heading"
-              className="mt-6  text-3xl font-medium leading-tight tracking-tight sm:text-4xl md:text-5xl"
+            className="mt-6  text-3xl font-medium leading-tight tracking-tight sm:text-4xl md:text-5xl"
           >
             Building with intent, from idea to interface.
           </h2>
@@ -31,8 +47,8 @@ export default function ExperienceSection() {
         <ol className="m-0 list-none p-0 md:col-span-3">
           {experience.map((item) => (
             <li
-              className="grid gap-4 border-t border-foreground/25 py-8 first:pt-0 sm:grid-cols-3 sm:gap-8"
-              key={`${item.company}-${item.role}`}
+              className="grid gap-4 border-t border-foreground/25 py-8  sm:grid-cols-3 sm:gap-8"
+              key={`${item.company}-${item.role}-${item.period}`}
             >
               <p className="m-0 text-xs tracking-wide uppercase text-foreground/60">
                 {item.period}
