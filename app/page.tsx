@@ -5,6 +5,8 @@ import TopHeroSection from "@/components/topHeroSection";
 import TopNavbarSection from "@/components/topNavbarSection";
 import ExperienceSection from "@/components/experienceSection";
 import AboutSection from "@/components/aboutSection";
+import FAQSection, { faqItems } from "@/components/faqSection";
+import { projects } from "@/components/projectsDisplaySection";
 
 const SITE = "https://www.nixhil.dev";
 
@@ -61,67 +63,28 @@ const structuredData = {
       "@type": "ItemList",
       "@id": `${SITE}/#projects`,
       name: "Featured projects by Nikhil Nandanwar",
-      itemListElement: [
-        {
-          n: "ShareVault",
-          d: "Secure file and text sharing with a 6-digit code.",
-          u: "https://share-vault-mango.vercel.app/",
-          c: "https://github.com/nikhil-nandanwar/ShareVault",
-          img: "onlineClipboard"
-        },
-        {
-          n: "GeminiChat",
-          d: "AI chat app powered by Google Gemini with sharing and persistence.",
-          u: "https://ai-by-gemini.netlify.app/",
-          c: "https://github.com/nikhil-nandanwar/GeminiApp",
-          img: "geminiChat"
-        },
-        {
-          n: "Mines Game",
-          d: "Browser-based Minesweeper with adjustable difficulty.",
-          u: "https://mines-game.netlify.app/",
-          c: "https://github.com/nikhil-nandanwar/Mines",
-          img: "minesGame"
-        },
-      ].map((p, i) => ({
+      itemListElement: projects.map((project, i) => ({
         "@type": "ListItem",
         position: i + 1,
         item: {
           "@type": "SoftwareApplication",
-          name: p.n,
-          description: p.d,
-          url: p.u,
+          name: project.title,
+          description: project.description,
+          url: project.href,
           applicationCategory: "WebApplication",
           operatingSystem: "Any",
-          image: `${SITE}/assets/${p.img}.webp`,
-          codeRepository: p.c,
+          image: `${SITE}${project.image}`,
+          codeRepository: project.code,
           author: { "@id": `${SITE}/#person` },
         },
       })),
     },
     {
       "@type": "FAQPage",
-      mainEntity: [
-        {
-          q: "Who is Nikhil Nandanwar?",
-          a: "Nikhil Nandanwar is a full stack developer from India who builds accessible web and mobile applications with React, Next.js, Node.js, MongoDB, Angular and .NET."
-        },
-        {
-          q: "What technologies does Nikhil Nandanwar work with?",
-          a: "React, Next.js, Node.js, MongoDB, Angular, C#, .NET, React Native, SQL, Docker, Git and TailwindCSS."
-        },
-        {
-          q: "What is Nikhil Nandanwar's experience?",
-          a: "Internships as a Full Stack Developer at Nabham Tech, a Full Stack Engineer at Cognizant, and a Frontend Developer at Living Pixel Labs."
-        },
-        {
-          q: "How can I hire or contact Nikhil Nandanwar?",
-          a: "Email nikhilnandanwar429@gmail.com or reach out on LinkedIn, GitHub or X."
-        },
-      ].map((f) => ({
+      mainEntity: faqItems.map((f) => ({
         "@type": "Question",
-        name: f.q,
-        acceptedAnswer: { "@type": "Answer", text: f.a },
+        name: f.question,
+        acceptedAnswer: { "@type": "Answer", text: f.answer },
       })),
     },
     {
@@ -158,6 +121,7 @@ export default function Home() {
         <ExperienceSection />
 
         <AboutSection />
+        <FAQSection />
       </main>
 
       <BottomFooterSection />

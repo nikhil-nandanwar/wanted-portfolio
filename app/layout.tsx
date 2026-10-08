@@ -69,10 +69,12 @@ export const metadata: Metadata = {
     description: siteDescription,
     images: [socialImage],
   },
-  icons: { icon: "/favicon.ico", apple: "/apple-touch-icon.png" },
+  icons: { icon: "/favicon.ico" },
   manifest: "/manifest.webmanifest",
-  // After adding the sites to Search Console / Bing Webmaster, paste the tokens:
-  verification: { google: "GOOGLE_TOKEN", other: { "msvalidate.01": "BING_TOKEN" } },
+  verification: {
+    google: "TODO_REPLACE_WITH_GOOGLE_SEARCH_CONSOLE_TOKEN",
+    other: { "msvalidate.01": "TODO_REPLACE_WITH_BING_WEBMASTER_TOKEN" },
+  },
   other: { "format-detection": "telephone=no" },
 };
 

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const projects = [
+export const projects = [
   {
     number: "01",
     title: "ShareVault - Secure Sharing Platform",
