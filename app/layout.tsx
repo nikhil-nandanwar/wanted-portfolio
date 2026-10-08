@@ -25,12 +25,23 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.nixhil.dev"),
   title: {
-    default: "Full Stack Developer | Nikhil Nandanwar",
+    default: "Nikhil Nandanwar | Full Stack Developer (React, Next.js, Node.js, .NET)",
     template: "%s | Nikhil Nandanwar",
   },
   description: siteDescription,
+  applicationName: "Nikhil Nandanwar Portfolio",
+  authors: [{ name: "Nikhil Nandanwar", url: "https://www.nixhil.dev" }],
+  creator: "Nikhil Nandanwar",
+  publisher: "Nikhil Nandanwar",
+  keywords: [
+    "Nikhil Nandanwar", "full stack developer", "React developer", "Next.js developer",
+    "Node.js developer", ".NET developer", "React Native developer", "web developer India",
+    "freelance full stack developer", "developer portfolio",
+  ],
+  category: "technology",
   alternates: {
     canonical: "/",
+    types: { "application/rss+xml": [] }, // add your blog feed URL here if it has one
   },
   robots: {
     index: true,
@@ -44,29 +55,34 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    type: "website",
     url: "https://www.nixhil.dev",
     title: "Full Stack Developer | Nikhil Nandanwar",
     description: siteDescription,
     siteName,
     locale: "en_IN",
     images: [socialImage],
+    type: "profile", firstName: "Nikhil", lastName: "Nandanwar", username: "nixhil_"
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary_large_image", creator: "@nixhil_", site: "@nixhil_",
     title: "Full Stack Developer | Nikhil Nandanwar",
     description: siteDescription,
     images: [socialImage],
   },
-  icons: {
-    icon: "/favicon.ico",
-  },
+  icons: { icon: "/favicon.ico", apple: "/apple-touch-icon.png" },
+  manifest: "/manifest.webmanifest",
+  // After adding the sites to Search Console / Bing Webmaster, paste the tokens:
+  verification: { google: "GOOGLE_TOKEN", other: { "msvalidate.01": "BING_TOKEN" } },
+  other: { "format-detection": "telephone=no" },
 };
 
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#f0efef",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f0efef" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+  ],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
