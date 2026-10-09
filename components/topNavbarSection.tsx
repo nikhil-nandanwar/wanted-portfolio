@@ -1,14 +1,46 @@
 import Link from "next/link";
 
 const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
-  { label: "Experience", href: "#experience" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" },
-  { label: "Blog", href: "https://blogs.nixhil.dev/", external: true },
-  { label: "Resume", href: "https://drive.google.com/file/d/1MORUESGlncs5203DXM_q7Sq6imkNaXYK/view", external: true },
+  {
+    flag: false,
+    label: "About",
+    href: "#about"
+  },
+  {
+    flag: false,
+    label: "Skills",
+    href: "#skills"
+  },
+  {
+    flag: false,
+    label: "Projects",
+    href: "#projects"
+  },
+  {
+    flag: false,
+    label: "Experience",
+    href: "#experience"
+  },
+  {
+    flag: true,
+    label: "FAQ",
+    href: "#faq"
+  },
+  {
+    flag: false,
+    label: "Contact",
+    href: "#contact"
+  },
+  {
+    flag: false,
+    label: "Blog",
+    href: "https://blogs.nixhil.dev/", external: true
+  },
+  {
+    flag: false,
+    label: "Resume",
+    href: "https://drive.google.com/file/d/1MORUESGlncs5203DXM_q7Sq6imkNaXYK/view", external: true
+  },
 ];
 
 export default function TopNavbarSection() {
@@ -21,7 +53,7 @@ export default function TopNavbarSection() {
         <div className="flex min-w-0 flex-1 items-center justify-end gap-0 overflow-x-auto sm:gap-4 md:gap-8 lg:gap-12">
           {navLinks.map((link) => (
             <Link
-              className="flex min-h-11 shrink-0 items-center px-1 text-[0.625rem] tracking-wide uppercase transition-opacity hover:opacity-60 sm:text-xs"
+              className={`flex min-h-11 shrink-0 items-center px-1 text-[0.625rem] tracking-wide uppercase transition-opacity hover:opacity-60 sm:text-xs ${link.flag ? "sr-only" : ""}`}
               href={link.href}
               key={link.label}
               {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
