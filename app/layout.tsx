@@ -1,24 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
 
 const siteName = "Nikhil Nandanwar";
 const siteDescription =
   "Nikhil Nandanwar is a full stack developer building thoughtful, accessible web applications with React, Node.js, MongoDB, and Next.js. Explore his work.";
 const socialImage = {
-  url: "/assets/preview.webp",
-  width: 1907,
-  height: 890,
+  url: "/assets/preview-social.webp",
+  width: 1200,
+  height: 630,
   alt: "Nikhil Nandanwar full stack developer portfolio",
 };
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
@@ -69,7 +64,10 @@ export const metadata: Metadata = {
     description: siteDescription,
     images: [socialImage],
   },
-  icons: { icon: "/favicon.ico" },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/icons/apple-touch-icon.png",
+  },
   manifest: "/manifest.webmanifest",
   verification: {
     google: "TODO_REPLACE_WITH_GOOGLE_SEARCH_CONSOLE_TOKEN",
@@ -90,8 +88,8 @@ export const viewport = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      lang="en-IN"
+      className={`${geistSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <a

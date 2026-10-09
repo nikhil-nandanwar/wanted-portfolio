@@ -1,54 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
-
-export const projects = [
-  {
-    number: "01",
-    title: "ShareVault - Secure Sharing Platform",
-    description:
-      "A secure file and text sharing application enabling users to share content with anyone using a simple 6-digit code. Built with modern web technologies for fast, secure, and hassle-free sharing experiences.",
-    tags: ["React", "Node.js", "MongoDB", "Cloudflare R2"],
-    image: "/assets/onlineClipboard.webp",
-    code: "https://github.com/nikhil-nandanwar/ShareVault",
-    href: "https://share-vault-mango.vercel.app/",
-  },
-  {
-    number: "02",
-    title: "GeminiChat - AI Chat Application",
-    description:
-      "An intelligent chat interface powered by Google Gemini AI with advanced features including conversation sharing, persistent storage, and seamless user interactions for enhanced productivity.",
-    tags: ["React", "Node.js", "Google Gemini"],
-    image: "/assets/geminiChat.webp",
-    code: "https://github.com/nikhil-nandanwar/GeminiApp",
-    href: "https://ai-by-gemini.netlify.app/",
-  },
-  {
-    number: "03",
-    title: "Mines Game - Minesweeper Game",
-    description:
-      "A modern web-based implementation of the classic Minesweeper game featuring adjustable difficulty levels, responsive design, and smooth gameplay for both casual and competitive players.",
-    tags: ["HTML5", "CSS3", "JavaScript"],
-    image: "/assets/minesGame.webp",
-    code: "https://github.com/nikhil-nandanwar/Mines",
-    href: "https://mines-game.netlify.app/",
-  },
-];
+import Section from "@/components/section";
+import { projects } from "@/data/site";
 
 export default function ProjectDisplaySection() {
   return (
-    <section
-      className="w-full scroll-mt-16 flex justify-center border-y border-t border-dashed border-foreground/25"
-      id="projects"
-      aria-labelledby="projects-heading"
-    >
-      <div className="w-full max-w-7xl border-x border-dashed border-foreground/25 px-4 py-16 sm:px-6 sm:py-24 lg:px-10 lg:py-36">
+    <Section id="projects" labelledBy="projects-heading">
         <div className="mb-10 flex items-start justify-between gap-4 sm:mb-14">
-          <h2 id="projects-heading" className="m-0 text-xs leading-normal tracking-widest uppercase text-foreground/60">Featured projects</h2>
-          {/* <p className="m-0 text-xs text-foreground/60">2024 — 2026</p> */}
+          <p className="m-0 text-xs leading-normal tracking-widest uppercase text-foreground/60">Featured projects</p>
+          <h2 id="projects-heading" className="sr-only">Selected projects by Nikhil Nandanwar</h2>
         </div>
         <div>
           {projects.map((project) => (
-            <article className="border-t border-foreground/25 last:border-b hover:bg-hover" key={project.number}>
+            <article className="border-t border-foreground/25 transition-colors hover:bg-foreground/2 last:border-b" key={project.number}>
               <div className="grid grid-cols-[2rem_minmax(0,1fr)] gap-6 py-6 sm:gap-x-6 lg:grid-cols-[2rem_minmax(0,1.1fr)_minmax(0,1fr)_auto] lg:items-start lg:gap-x-8">
                 <span className="text-xs text-foreground/50" aria-hidden="true">
                   {project.number}
@@ -105,8 +69,6 @@ export default function ProjectDisplaySection() {
             </article>
           ))}
         </div>
-      </div>
-
-    </section>
+    </Section>
   );
 }

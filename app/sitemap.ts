@@ -1,10 +1,11 @@
 import type { MetadataRoute } from "next";
+import { LAST_MODIFIED, SITE } from "@/data/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://www.nixhil.dev",
-      lastModified: "2026-10-08",
+      url: SITE,
+      lastModified: LAST_MODIFIED,
       changeFrequency: "monthly",
       priority: 1
     }

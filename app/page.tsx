@@ -5,10 +5,8 @@ import TopHeroSection from "@/components/topHeroSection";
 import TopNavbarSection from "@/components/topNavbarSection";
 import ExperienceSection from "@/components/experienceSection";
 import AboutSection from "@/components/aboutSection";
-import FAQSection, { faqItems } from "@/components/faqSection";
-import { projects } from "@/components/projectsDisplaySection";
-
-const SITE = "https://www.nixhil.dev";
+import FAQSection from "@/components/faqSection";
+import { faqItems, projects, LAST_MODIFIED, SITE } from "@/data/site";
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -19,12 +17,12 @@ const structuredData = {
       name: "Nikhil Nandanwar",
       alternateName: ["Nikhil", "nixhil", "nikhil-nandanwar"],
       url: SITE,
-      image: `${SITE}/assets/preview.webp`,
+      image: `${SITE}/assets/preview-social.webp`,
       jobTitle: "Full Stack Developer",
       description:
         "Full stack developer building accessible web and mobile applications with React, Next.js, Node.js, MongoDB, Angular and .NET.",
-      email: "mailto:nikhilnandanwar429@gmail.com",
-      address: { "@type": "PostalAddress", addressLocality: "Banglore", addressRegion: "Karnataka", addressCountry: "IN" },
+      email: "contact@nixhil.dev",
+      address: { "@type": "PostalAddress", addressLocality: "Bangalore", addressRegion: "Karnataka", addressCountry: "IN" },
       nationality: { "@type": "Country", name: "India" },
       knowsAbout: [
         "Full stack web development", "React", "Next.js", "Node.js", "MongoDB", "Angular",
@@ -52,12 +50,15 @@ const structuredData = {
       "@id": `${SITE}/#webpage`,
       url: SITE,
       name: "Nikhil Nandanwar | Full Stack Developer",
+      description:
+        "Nikhil Nandanwar is a full stack developer building thoughtful, accessible web applications.",
+
       isPartOf: { "@id": `${SITE}/#website` },
       about: { "@id": `${SITE}/#person` },
       mainEntity: { "@id": `${SITE}/#person` },
       inLanguage: "en-IN",
-      dateModified: "2026-10-08",
-      primaryImageOfPage: { "@type": "ImageObject", url: `${SITE}/assets/preview.webp` },
+      dateModified: LAST_MODIFIED,
+      primaryImageOfPage: { "@type": "ImageObject", url: `${SITE}/assets/preview-social.webp` },
     },
     {
       "@type": "ItemList",
@@ -87,18 +88,6 @@ const structuredData = {
         acceptedAnswer: { "@type": "Answer", text: f.answer },
       })),
     },
-    {
-      "@type": "WebPage",
-      "@id": "https://www.nixhil.dev/#webpage",
-      url: "https://www.nixhil.dev",
-      name: "Nikhil Nandanwar | Full Stack Developer",
-      description:
-        "Nikhil Nandanwar is a full stack developer building thoughtful, accessible web applications.",
-      isPartOf: { "@id": "https://www.nixhil.dev/#website" },
-      about: { "@id": "https://www.nixhil.dev/#person" },
-      inLanguage: "en-IN",
-      mainEntity: { "@id": "https://www.nixhil.dev/#person" },
-    },
   ],
 };
 
@@ -107,7 +96,7 @@ export default function Home() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
       />
       <TopNavbarSection />
 
