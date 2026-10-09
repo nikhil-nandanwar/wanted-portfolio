@@ -39,7 +39,7 @@ const navLinks = [
   {
     flag: false,
     label: "Resume",
-    href: "https://drive.google.com/file/d/1MORUESGlncs5203DXM_q7Sq6imkNaXYK/view", external: true
+    href: "/documents/Nikhil_Nandanwar_Full_Stack_Developer.pdf", external: true
   },
 ];
 
