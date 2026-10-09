@@ -1,22 +1,13 @@
 import Link from "next/link";
+import { GitHub } from "@/components/skills/github";
+import { LinkedIn } from "@/components/skills/linkedIn";
+import { XformerlyTwitter } from "@/components/skills/x";
 
 const footerLinks = [
-  {
-    link: "https://github.com/nikhil-nandanwar",
-    name: "GitHub",
-    logo: ""
-  },
-  {
-    link: "https://x.com/nixhil_",
-    name: "X",
-    logo: ""
-  },
-  {
-    link: "https://www.linkedin.com/in/nandanwar-nikhil",
-    name: "LinkedIn",
-    logo: ""
-  }
-]
+  { link: "https://github.com/nikhil-nandanwar", name: "GitHub", Icon: GitHub },
+  { link: "https://x.com/nixhil_", name: "X", Icon: XformerlyTwitter },
+  { link: "https://www.linkedin.com/in/nandanwar-nikhil", name: "LinkedIn", Icon: LinkedIn },
+];
 
 export default function BottomFooterSection() {
   return (
@@ -44,19 +35,22 @@ export default function BottomFooterSection() {
             {
               footerLinks.map((footerlink) => (
                 <Link
-                  key={`${footerlink.link}-${footerlink.name}-${footerlink.logo}`}
-                  className="text-xs tracking-wide uppercase transition-opacity hover:opacity-60"
+                  key={`${footerlink.link}-${footerlink.name}-${footerlink}`}
+                  className="flex items-center gap-2 text-xs tracking-wide uppercase transition-opacity hover:opacity-60"
                   href={footerlink.link}
                   target="_blank"
                   rel="me noopener noreferrer"
                 >
-                  {footerlink.name}<span className="sr-only"> (opens in a new tab)</span>
+                  <footerlink.Icon aria-hidden="true" className="size-6" />
+                  <span className="sr-only">  
+                  {footerlink.name}
+                  </span>
+                  <span className="sr-only"> (opens in a new tab)</span>
                 </Link>
               ))
             }
           </nav>
         </div>
-
       </div>
     </footer>
   );
