@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     images: [socialImage],
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/assets/codeLogo.webp",
     apple: "/icons/apple-touch-icon.png",
   },
   manifest: "/manifest.webmanifest",
