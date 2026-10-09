@@ -1,3 +1,4 @@
+// Download from https://svgl.app/
 import type { SVGProps } from "react";
 
 const Angular = (props: SVGProps<SVGSVGElement>) => (

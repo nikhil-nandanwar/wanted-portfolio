@@ -70,11 +70,13 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.webmanifest",
   verification: {
-    google: "TODO_REPLACE_WITH_GOOGLE_SEARCH_CONSOLE_TOKEN",
-    other: { "msvalidate.01": "TODO_REPLACE_WITH_BING_WEBMASTER_TOKEN" },
+    google: "f1T3vQfnYtsQ-EpCWeLTVo8btB5bG0QnVw09umkoIoo",
+    other: { "msvalidate.01": "AEA746E414D5C6F56EE5D86283F9E53E" },
   },
   other: { "format-detection": "telephone=no" },
 };
+
+
 
 export const viewport = {
   width: "device-width",
