@@ -1,5 +1,6 @@
 export const SITE = "https://www.nixhil.dev";
-export const LAST_MODIFIED = "2026-10-09";
+export const DATE_CREATED = "2026-09-23T22:40:32+05:30";
+export const LAST_MODIFIED = "2026-10-09T22:40:32+05:30";
 
 export const skills = [
   "HTML5", "CSS3", "JavaScript", "React", "Node.js", "C#", ".NET",

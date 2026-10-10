@@ -6,7 +6,7 @@ import TopNavbarSection from "@/components/topNavbarSection";
 import ExperienceSection from "@/components/experienceSection";
 import AboutSection from "@/components/aboutSection";
 import FAQSection from "@/components/faqSection";
-import { faqItems, projects, LAST_MODIFIED, SITE } from "@/data/site";
+import { faqItems, projects, DATE_CREATED, LAST_MODIFIED, SITE } from "@/data/site";
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -57,6 +57,7 @@ const structuredData = {
       about: { "@id": `${SITE}/#person` },
       mainEntity: { "@id": `${SITE}/#person` },
       inLanguage: "en-IN",
+      dateCreated: DATE_CREATED,
       dateModified: LAST_MODIFIED,
       primaryImageOfPage: { "@type": "ImageObject", url: `${SITE}/assets/preview-social.webp` },
     },
