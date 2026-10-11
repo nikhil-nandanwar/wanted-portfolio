@@ -10,7 +10,7 @@ export default function SkillsSection() {
       <h2 id="skills-heading" className="mt-6 text-3xl font-medium tracking-tight sm:text-5xl">
         Technical skills &amp; technologies
       </h2>
-      <ul className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4 md:grid-cols-8">
+      <ul className="mt-10 grid grid-cols-4 gap-3  md:grid-cols-8">
         {skills.map((skill) => {
           const Icon = skillIcons[skill];
           return (

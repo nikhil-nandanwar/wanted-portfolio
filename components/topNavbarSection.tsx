@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const navLinks = [
   {
-    flag: false,
+    flag: true,
     label: "About",
     href: "#about"
   },
