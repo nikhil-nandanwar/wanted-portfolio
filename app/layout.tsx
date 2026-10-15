@@ -36,7 +36,10 @@ export const metadata: Metadata = {
   category: "technology",
   alternates: {
     canonical: "/",
-    types: { "application/rss+xml": [] }, // add your blog feed URL here if it has one
+    types: {
+      "application/rss+xml": [],           // add your blog feed URL here if it has one
+      "text/markdown": "/index.md",         // markdown representation for AI agents
+    },
   },
   robots: {
     index: true,
@@ -93,6 +96,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en-IN"
       className={`${geistSans.variable} h-full antialiased`}
     >
+      <head>
+        {/* Advertise the text/markdown alternate so agents can discover it */}
+        <link rel="alternate" type="text/markdown" href="/index.md" />
+      </head>
       <body className="min-h-full flex flex-col">
         <a
           className="absolute left-2 top-2 z-100 -translate-y-20 bg-foreground px-4 py-3 text-xs uppercase text-background transition-transform focus:translate-y-0"
