@@ -2,8 +2,8 @@
 # https://www.robotstxt.org/robotstxt.html
 
 User-agent: *
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
 Allow: /
 
 # Content Signals (IETF aipref draft)
 # https://contentsignals.org/
-Content-Signal: ai-train=yes, search=yes, ai-input=yes
