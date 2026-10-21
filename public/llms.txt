@@ -2,7 +2,7 @@
 > Full stack developer from India building accessible web and mobile apps with React, Next.js, Node.js, MongoDB, Angular and .NET.
 
 ## Key pages
-- [Portfolio](https://www.nixhil.dev/): about, skills, projects, experience, contact
+- [Portfolio](https://nixhil.dev/): about, skills, projects, experience, contact
 - [Blog](https://blogs.nixhil.dev/): articles by Nikhil
 - [Resume](https://drive.google.com/file/d/1MORUESGlncs5203DXM_q7Sq6imkNaXYK/view)
 

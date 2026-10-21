@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
     return [{
       source: "/:path*",
       has: [{ type: "host", value: "nixhil.dev" }],
-      destination: "https://www.nixhil.dev/:path*",
+      destination: "https://nixhil.dev/:path*",
       permanent: true
     }];
   },
