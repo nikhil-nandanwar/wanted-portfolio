@@ -3,14 +3,6 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   images: { formats: ["image/avif", "image/webp"] },
-  async redirects() {
-    return [{
-      source: "/:path*",
-      has: [{ type: "host", value: "www.nixhil.dev" }],
-      destination: "https://nixhil.dev/:path*",
-      permanent: true
-    }];
-  },
   async headers() {
     return [{
       source: "/(.*)", headers: [

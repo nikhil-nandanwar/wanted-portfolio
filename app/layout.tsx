@@ -18,14 +18,14 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nixhil.dev"),
+  metadataBase: new URL("https://www.nixhil.dev"),
   title: {
-    default: "Nikhil Nandanwar | Full Stack Developer",
+    default: "Nikhil Nandanwar | Full Stack Developer (React, Next.js, Node.js, .NET)",
     template: "%s | Nikhil Nandanwar",
   },
   description: siteDescription,
   applicationName: "Nikhil Nandanwar Portfolio",
-  authors: [{ name: "Nikhil Nandanwar", url: "https://nixhil.dev" }],
+  authors: [{ name: "Nikhil Nandanwar", url: "https://www.nixhil.dev" }],
   creator: "Nikhil Nandanwar",
   publisher: "Nikhil Nandanwar",
   keywords: [
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    url: "https://nixhil.dev",
+    url: "https://www.nixhil.dev",
     title: "Full Stack Developer | Nikhil Nandanwar",
     description: siteDescription,
     siteName,

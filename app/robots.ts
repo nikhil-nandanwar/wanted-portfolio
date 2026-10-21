@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://nixhil.dev/sitemap.xml",
+    sitemap: "https://www.nixhil.dev/sitemap.xml",
   };
 }
