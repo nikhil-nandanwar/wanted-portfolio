@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [{
       source: "/:path*",
-      has: [{ type: "host", value: "nixhil.dev" }],
+      has: [{ type: "host", value: "www.nixhil.dev" }],
       destination: "https://nixhil.dev/:path*",
       permanent: true
     }];
