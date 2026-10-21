@@ -20,7 +20,7 @@ const geistSans = Geist({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.nixhil.dev"),
   title: {
-    default: "Nikhil Nandanwar | Full Stack Developer (React, Next.js, Node.js, .NET)",
+    default: "Nikhil Nandanwar | Full Stack Developer",
     template: "%s | Nikhil Nandanwar",
   },
   description: siteDescription,
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   keywords: [
     "Nikhil Nandanwar", "full stack developer", "React developer", "Next.js developer",
     "Node.js developer", ".NET developer", "React Native developer", "web developer India",
-    "freelance full stack developer", "developer portfolio",
+    "freelance full stack developer", "developer portfolio","Mobile App developer", "web application developer", "software engineer", "software developer", "front-end developer", "back-end developer", "MERN stack developer", "MEAN stack developer", "JavaScript developer", "TypeScript developer", "MongoDB developer", "Express.js developer", "REST API developer", "GraphQL developer", "UI/UX designer", "responsive web design", "progressive web app (PWA) developer", "cloud computing developer", "AWS developer", "Azure developer", "Google Cloud Platform (GCP) developer", "DevOps engineer", "CI/CD pipeline developer", "agile software development practitioner"
   ],
   category: "technology",
   alternates: {

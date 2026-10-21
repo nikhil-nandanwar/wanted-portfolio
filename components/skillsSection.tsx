@@ -6,7 +6,9 @@ import { skillIcons } from "@/components/skills";
 export default function SkillsSection() {
   return (
     <Section id="skills" labelledBy="skills-heading">
-      <p className="text-xs uppercase tracking-widest text-foreground/60">Skills</p>
+      <p className="text-xs uppercase tracking-widest text-foreground/60">
+        Skills
+      </p>
       <h2 id="skills-heading" className="mt-6 text-3xl font-medium tracking-tight sm:text-5xl">
         Technical skills &amp; technologies
       </h2>

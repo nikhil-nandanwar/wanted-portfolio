@@ -20,15 +20,17 @@ const structuredData = {
       image: `${SITE}/assets/preview-social.webp`,
       jobTitle: "Full Stack Developer",
       description:
-        "Full stack developer building accessible web and mobile applications with React, Next.js, Node.js, MongoDB, Angular and .NET.",
+        "Full stack developer building accessible web and mobile applications which are fast, scalable, and user-friendly. Skilled in React, Next.js, Node.js, .NET, MongoDB, and more.",
       email: "contact@nixhil.dev",
       address: { "@type": "PostalAddress", addressLocality: "Bangalore", addressRegion: "Karnataka", addressCountry: "IN" },
       nationality: { "@type": "Country", name: "India" },
       knowsAbout: [
         "Full stack web development", "React", "Next.js", "Node.js", "MongoDB", "Angular",
         "C#", ".NET", "React Native", "Docker", "TailwindCSS", "Web accessibility", "Microservices",
+        "REST APIs", "GraphQL", "Progressive Web Apps (PWA)", "Cloud computing", "AWS", "Azure", "Google Cloud Platform (GCP)", "DevOps", "CI/CD pipelines", "Agile software development"
       ],
-      hasOccupation: { "@type": "Occupation", name: "Full Stack Developer", skills: "React, Next.js, Node.js, .NET, MongoDB" },
+      hasOccupation: { "@type": "Occupation", name: "Full Stack Developer", skills: "React, Next.js, Node.js, .NET, MongoDB, Angular, C#, React Native, Docker, TailwindCSS, Web accessibility, Microservices, REST APIs, GraphQL, Progressive Web Apps (PWA), Cloud computing, AWS, Azure, Google Cloud Platform (GCP), DevOps, CI/CD pipelines, Agile software development" },
+
       sameAs: [
         "https://github.com/nikhil-nandanwar",
         "https://x.com/nixhil_",
@@ -51,7 +53,7 @@ const structuredData = {
       url: SITE,
       name: "Nikhil Nandanwar | Full Stack Developer",
       description:
-        "Nikhil Nandanwar is a full stack developer building thoughtful, accessible web applications.",
+        "Full stack developer building accessible web and mobile applications which are fast, scalable, and user-friendly. Skilled in React, Next.js, Node.js, .NET, MongoDB, and more.",
 
       isPartOf: { "@id": `${SITE}/#website` },
       about: { "@id": `${SITE}/#person` },

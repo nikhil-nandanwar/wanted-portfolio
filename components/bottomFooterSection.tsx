@@ -17,7 +17,9 @@ export default function BottomFooterSection() {
     >
       <div className="w-full max-w-7xl border-x border-dashed border-foreground/25 px-4 py-16 sm:px-6 sm:py-24 lg:px-10 lg:pt-26">
 
-        <h2 className="m-0 text-xs leading-normal tracking-widest uppercase text-foreground/60">Have a project in mind?</h2>
+        <h2 className="m-0 text-xs leading-normal tracking-widest uppercase text-foreground/60">
+          Have a project in mind?
+        </h2>
         <Link
           className="my-7 mb-16 flex min-h-11 items-end justify-between gap-4 border-b-2 border-foreground pb-5 text-3xl font-medium leading-tight tracking-tight wrap-anywhere sm:text-4xl sm:pb-7 md:mb-28 md:text-5xl"
           href="mailto:contact@nixhil.dev"
@@ -42,8 +44,8 @@ export default function BottomFooterSection() {
                   rel="me noopener noreferrer"
                 >
                   <footerlink.Icon aria-hidden="true" className="size-6" />
-                  <span className="sr-only">  
-                  {footerlink.name}
+                  <span className="sr-only">
+                    {footerlink.name}
                   </span>
                   <span className="sr-only"> (opens in a new tab)</span>
                 </Link>

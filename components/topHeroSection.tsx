@@ -23,9 +23,7 @@ export default function TopHeroSection() {
           interfaces, strong visual systems, and beautifully simple
           interactions.
         </p>
-
         <div>
-
           <Link
             className="flex min-h-11 items-center border-b border-foreground text-xs uppercase tracking-wide whitespace-nowrap"
             href="#projects"
