@@ -12,9 +12,9 @@ export default function Section({ id, labelledBy, children, className = "" }: Se
     <section
       id={id}
       aria-labelledby={labelledBy}
-      className={`flex w-full scroll-mt-18 justify-center border-y border-dashed border-foreground/25 ${className}`}
+      className={`relative flex w-full scroll-mt-20 justify-center ${className}`}
     >
-      <div className="w-full max-w-7xl border-x border-dashed border-foreground/25 px-4 py-16 sm:px-6 sm:py-24 lg:px-10 lg:py-36">
+      <div className="w-full max-w-6xl px-4 py-16 sm:px-8 sm:py-24 lg:px-10 lg:py-32">
         {children}
       </div>
     </section>

@@ -12,45 +12,63 @@ const footerLinks = [
 export default function BottomFooterSection() {
   return (
     <footer
-      className="mx-auto w-full scroll-mt-18 flex justify-center border-y border-dashed border-foreground/25"
+      className="relative flex w-full justify-center"
       id="contact"
     >
-      <div className="w-full max-w-7xl border-x border-dashed border-foreground/25 px-4 py-16 sm:px-6 sm:py-24 lg:px-10 lg:pt-26">
-
-        <h2 className="m-0 text-xs leading-normal tracking-widest uppercase text-foreground/60">
-          Have a project in mind?
-        </h2>
-        <Link
-          className="my-7 mb-16 flex min-h-11 items-end justify-between gap-4 border-b-2 border-foreground pb-5 text-3xl font-medium leading-tight tracking-tight wrap-anywhere sm:text-4xl sm:pb-7 md:mb-28 md:text-5xl"
-          href="mailto:contact@nixhil.dev"
-        >
-          Let&apos;s work together{" "}
-          <span className="text-3xl md:text-5xl" aria-hidden="true">↗</span>
-        </Link>
-        <div className="flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
-          <p className="m-0 flex items-center text-xs text-foreground/60">
-            <span className="mr-1 flex w-2 text-base" aria-hidden="true">&copy;</span>
-            {new Date().getFullYear()} Nikhil Nandanwar
+      <div className="w-full max-w-6xl px-4 py-16 sm:px-8 sm:py-28 lg:px-10">
+        {/* CTA section */}
+        <div className="glass rounded-3xl p-6 sm:p-12 lg:p-16 text-center">
+          <p className="m-0 text-xs font-semibold uppercase tracking-widest text-foreground/40">
+            Get in touch
           </p>
-          <nav className="flex gap-6 md:gap-12" aria-label="Social links">
+          <h2 className="mt-4 text-2xl font-bold leading-tight tracking-tight sm:mt-6 sm:text-4xl md:text-5xl">
+            Let&apos;s build something{" "}
+            <span className="gradient-text">great together.</span>
+          </h2>
+          <p className="mx-auto mt-3 max-w-lg text-sm leading-6 text-foreground/40 sm:mt-4 sm:leading-7">
+            I&apos;m always open to discussing new opportunities, interesting projects,
+            or ways I can add value to your team.
+          </p>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-center sm:gap-4">
+            <Link
+              className="glow-hover flex min-h-12 items-center justify-center rounded-xl bg-foreground px-7 text-sm font-semibold tracking-wide text-background transition-all duration-300 hover:opacity-85"
+              href="mailto:contact@nixhil.dev"
+            >
+              Send me an email
+              <span className="ml-3" aria-hidden="true">↗</span>
+            </Link>
+            <Link
+              className="flex min-h-12 items-center justify-center rounded-xl border border-foreground/20 px-6 text-sm font-medium tracking-wide transition-all duration-200 hover:border-foreground hover:bg-foreground hover:text-background"
+              href="/documents/Nikhil_Nandanwar_Full_Stack_Developer.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download Resume
+              <span className="sr-only"> (opens in a new tab)</span>
+            </Link>
+          </div>
+        </div>
 
-            {
-              footerLinks.map((footerlink) => (
-                <Link
-                  key={`${footerlink.link}-${footerlink.name}-${footerlink}`}
-                  className="flex items-center gap-2 text-xs tracking-wide uppercase transition-opacity hover:opacity-60"
-                  href={footerlink.link}
-                  target="_blank"
-                  rel="me noopener noreferrer"
-                >
-                  <footerlink.Icon aria-hidden="true" className="size-6" />
-                  <span className="sr-only">
-                    {footerlink.name}
-                  </span>
-                  <span className="sr-only"> (opens in a new tab)</span>
-                </Link>
-              ))
-            }
+        {/* Bottom bar */}
+        <div className="mt-10 flex flex-col items-center gap-4 text-center sm:mt-12 sm:flex-row sm:justify-between sm:text-left">
+          <p className="m-0 text-xs text-foreground/30">
+            &copy; {new Date().getFullYear()} Nikhil Nandanwar. Built with Next.js.
+          </p>
+          <nav className="flex gap-4 sm:gap-5" aria-label="Social links">
+            {footerLinks.map((footerlink) => (
+              <Link
+                key={`${footerlink.link}-${footerlink.name}`}
+                className="flex items-center justify-center rounded-xl p-2.5 text-foreground/40 transition-all duration-200 hover:bg-foreground/5 hover:text-foreground"
+                href={footerlink.link}
+                target="_blank"
+                rel="me noopener noreferrer"
+              >
+                <footerlink.Icon aria-hidden="true" className="size-5" />
+                <span className="sr-only">
+                  {footerlink.name} (opens in a new tab)
+                </span>
+              </Link>
+            ))}
           </nav>
         </div>
       </div>
