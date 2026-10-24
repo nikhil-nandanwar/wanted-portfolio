@@ -73,7 +73,7 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.webmanifest",
   verification: {
-    google: "",
+    google: "G1KEugmB96eEfAR6EwZB0Zw0zAEDtsHtUhB0XgGeRq8",
     other: { "msvalidate.01": "AEA746E414D5C6F56EE5D86283F9E53E" },
   },
   other: { "format-detection": "telephone=no" },
