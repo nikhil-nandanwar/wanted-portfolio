@@ -3,34 +3,43 @@ import Section from "@/components/section";
 export default function AboutSection() {
   return (
     <Section id="about" labelledBy="about-heading">
-      <p className="m-0 text-xs font-semibold uppercase tracking-widest text-foreground/40">
-        About Me
-      </p>
-      <div className="mt-8 grid gap-8 sm:mt-14 md:grid-cols-5 md:gap-16 lg:gap-24">
+      <div className="border-t border-[var(--border)] pt-12 sm:pt-16 lg:pt-20">
         <h2
           id="about-heading"
-          className="m-0 text-2xl font-bold leading-tight tracking-tight wrap-anywhere sm:text-3xl md:col-span-3 md:text-4xl"
+          className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-foreground text-balance pb-6 sm:pb-8"
         >
-          I care about craft — making things that are{" "}
-          <span className="gradient-text">useful, fast, and memorable.</span>
+          About & Engineering Philosophy
         </h2>
-        <div className="md:col-span-2">
-          <p className="mt-0 mb-4 text-sm leading-6 text-foreground/50 sm:mb-5 sm:leading-7">
-            My approach combines clean architecture with deliberate design. I enjoy
-            turning early ideas into focused, accessible products that work just
-            as well as they look.
-          </p>
-          <p className="mt-0 mb-4 text-sm leading-6 text-foreground/50 sm:mb-5 sm:leading-7">
-            I thrive in collaborative environments, move fast with clear ownership,
-            and care deeply about the developer experience — both for users and
-            teams I work with.
-          </p>
-          <p className="sr-only mt-0 mb-5 leading-7 text-foreground/50">
-            Nikhil Nandanwar is a full stack developer from India who builds web
-            and mobile applications with React, Next.js, Node.js, MongoDB,
-            Angular and .NET, and has worked as an intern at Nabham Tech,
-            Cognizant and Living Pixel Labs.
-          </p>
+
+        <div className="grid gap-8 sm:gap-10 lg:grid-cols-12 lg:gap-16 items-start">
+          {/* Main Statement */}
+          <div className="lg:col-span-5">
+            <p className="text-lg xs:text-xl sm:text-2xl font-bold leading-snug tracking-tight text-foreground text-balance">
+              I believe great software is built at the intersection of robust architecture, strict accessibility, and deliberate design.
+            </p>
+            <div className="mt-6 sm:mt-8 space-y-2.5 border-l-2 border-[var(--accent)] pl-4 text-xs sm:text-sm font-medium text-[var(--muted)]">
+              <p>📍 Location: Bangalore, Karnataka, India</p>
+              <p>⚡ Stack: React, Next.js, Node.js, .NET, Full-Stack Architecture</p>
+              <p>🤝 Focus: Scalable web applications & mobile experiences</p>
+            </div>
+          </div>
+
+          {/* Narrative paragraphs */}
+          <div className="lg:col-span-7 space-y-5 sm:space-y-6 text-sm sm:text-base leading-relaxed text-[var(--muted)] text-pretty">
+            <p>
+              My background spans engineering frontend applications with React and Next.js, implementing
+              cross-platform mobile clients with React Native, and architecting backend services with Node.js and .NET.
+              I treat developer experience and end-user speed as first-class architectural constraints.
+            </p>
+            <p>
+              Having worked across fast-moving startups and enterprise teams like Cognizant and Nabham Tech,
+              I value clear ownership, pragmatic design decisions, and writing maintainable code that scales gracefully.
+            </p>
+            <p>
+              When not writing code, I explore open web standards, document technical concepts on my blog,
+              and build practical open-source utilities.
+            </p>
+          </div>
         </div>
       </div>
     </Section>

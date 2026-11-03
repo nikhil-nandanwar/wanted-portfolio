@@ -16,6 +16,8 @@
 # next.js
 /.next/
 /out/
+.agents/
+data/skills/
 
 # production
 /build

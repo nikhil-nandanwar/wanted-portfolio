@@ -10,7 +10,6 @@ export const skills = [
 
 export const projects = [
   {
-    number: "01",
     title: "ShareVault - Secure Sharing Platform",
     description:
       "A secure file and text sharing application enabling users to share content with anyone using a simple 6-digit code. Built with modern web technologies for fast, secure, and hassle-free sharing experiences.",
@@ -20,7 +19,6 @@ export const projects = [
     href: "https://share-vault-mango.vercel.app/",
   },
   {
-    number: "02",
     title: "GeminiChat - AI Chat Application",
     description:
       "An intelligent chat interface powered by Google Gemini AI with advanced features including conversation sharing, persistent storage, and seamless user interactions for enhanced productivity.",
@@ -30,7 +28,6 @@ export const projects = [
     href: "https://ai-by-gemini.netlify.app/",
   },
   {
-    number: "03",
     title: "Mines Game - Minesweeper Game",
     description:
       "A modern web-based implementation of the classic Minesweeper game featuring adjustable difficulty levels, responsive design, and smooth gameplay for both casual and competitive players.",

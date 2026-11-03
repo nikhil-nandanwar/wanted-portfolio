@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Section from "@/components/section";
 import { experience } from "@/data/site";
 
@@ -6,77 +9,125 @@ const monthYear = new Intl.DateTimeFormat("en-IN", {
   year: "numeric",
 });
 
+const achievements: Record<string, string[]> = {
+  "Nabham Tech": [
+    "Engineered the full-stack video recording web portal and companion React Native mobile application",
+    "Configured containerized microservices with Docker for seamless staging and deployment",
+    "Developed robust administrative dashboards with role-based authentication and telemetry",
+  ],
+  Cognizant: [
+    "Implemented insurance underwriting business logic within a C# / .NET microservices ecosystem",
+    "Built and audited granular Role-Based Access Control (RBAC) security filters across endpoints",
+    "Created modular Angular frontend views consuming asynchronous REST services with high test coverage",
+  ],
+  "Living Pixel Labs": [
+    "Developed the official marketing site and mobile client for the AI conversational assistant",
+    "Integrated live streaming chat interactions with low latency and optimistic UI updates",
+    "Established scalable component primitives adhering to accessibility best practices",
+  ],
+};
+
 export default function ExperienceSection() {
+  const [expandedCompany, setExpandedCompany] = useState<string | null>(experience[0].company);
+
+  const toggleCompany = (company: string) => {
+    setExpandedCompany(expandedCompany === company ? null : company);
+  };
+
   return (
     <Section id="experience" labelledBy="experience-heading">
-      <p className="m-0 text-xs font-semibold uppercase tracking-widest text-foreground/40">
-        Experience
-      </p>
-      <h2
-        id="experience-heading"
-        className="mt-3 mb-10 max-w-xl text-2xl font-bold leading-tight tracking-tight sm:mt-4 sm:mb-14 sm:text-3xl md:text-4xl"
-      >
-        Where I&apos;ve worked.
-      </h2>
-
-      <div className="relative">
-        {/* Timeline line */}
-        <div
-          className="absolute left-[15px] top-0 bottom-0 hidden w-px bg-gradient-to-b from-foreground/30 via-foreground/10 to-transparent md:block"
-          aria-hidden="true"
-        />
-
-        <ol className="m-0 grid list-none gap-6 p-0 sm:gap-8">
-          {experience.map((item) => (
-            <li
-              key={`${item.company}-${item.role}`}
-              className="glass glow-hover group relative grid gap-4 rounded-2xl p-5 transition-all duration-300 hover:border-[var(--accent)]/40 sm:p-8 md:grid-cols-[1fr_2.5fr] md:gap-8 md:pl-12"
+      <div className="border-t border-[var(--border)] pt-12 sm:pt-16 lg:pt-20">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 pb-8 sm:pb-12">
+          <div>
+            <h2
+              id="experience-heading"
+              className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-foreground text-balance"
             >
-              {/* Timeline dot */}
-              <div
-                className="absolute top-8 hidden size-2.5 rounded-full bg-foreground ring-4 ring-[var(--background)] transition-colors duration-300 group-hover:bg-[var(--accent)] md:block"
-                aria-hidden="true"
-                style={{ left: "-16px" }}
-              />
+              Work Experience
+            </h2>
+            <p className="mt-3 max-w-xl text-sm sm:text-base leading-relaxed text-[var(--muted)] text-pretty">
+              Proven engineering background across fast-paced product teams, enterprise architectures, and distributed systems.
+            </p>
+          </div>
+        </div>
 
-              {/* Date & company */}
-              <div className="space-y-1 sm:space-y-1.5">
-                <p className="m-0 text-xs font-semibold tracking-wide text-foreground/50">
-                  <time dateTime={item.start}>
-                    {monthYear.format(new Date(`${item.start}-01`))}
-                  </time>{" "}
-                  –{" "}
-                  <time dateTime={item.end}>
-                    {monthYear.format(new Date(`${item.end}-01`))}
-                  </time>
-                </p>
-                <p className="m-0 text-sm font-medium text-foreground/40">
-                  {item.company}
-                </p>
-              </div>
+        <div className="divide-y divide-[var(--border)] border-y border-[var(--border)]">
+          {experience.map((item) => {
+            const isExpanded = expandedCompany === item.company;
+            const bullets = achievements[item.company];
 
-              {/* Role & description */}
-              <div>
-                <h3 className="m-0 text-base font-bold leading-tight tracking-tight sm:text-lg lg:text-xl">
-                  {item.role}
-                </h3>
-                <p className="mt-2.5 m-0 text-sm leading-6 text-foreground/50 sm:mt-3 sm:leading-7">
-                  {item.description}
-                </p>
-                <ul
-                  className="mt-4 flex list-none flex-wrap gap-1.5 p-0 sm:mt-5 sm:gap-2"
-                  aria-label={`Areas of focus at ${item.company}`}
-                >
-                  {item.focus.map((area) => (
-                    <li className="tag" key={area}>
-                      {area}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </li>
-          ))}
-        </ol>
+            return (
+              <article
+                key={`${item.company}-${item.role}`}
+                className="py-6 sm:py-8 grid gap-4 md:grid-cols-12 md:gap-8 items-start transition-colors"
+              >
+                {/* Date & Company (left column) */}
+                <div className="md:col-span-4 space-y-1">
+                  <p className="text-base font-bold tracking-tight text-foreground">
+                    {item.company}
+                  </p>
+                  <p className="text-xs font-medium tabular-nums text-[var(--muted)]">
+                    <time dateTime={item.start}>
+                      {monthYear.format(new Date(`${item.start}-01`))}
+                    </time>{" "}
+                    —{" "}
+                    <time dateTime={item.end}>
+                      {monthYear.format(new Date(`${item.end}-01`))}
+                    </time>
+                  </p>
+                </div>
+
+                {/* Role & Description (right column) */}
+                <div className="md:col-span-8">
+                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                    <h3 className="text-base sm:text-lg font-bold tracking-tight text-foreground">
+                      {item.role}
+                    </h3>
+
+                    {bullets && (
+                      <button
+                        type="button"
+                        onClick={() => toggleCompany(item.company)}
+                        className="btn-press text-xs font-semibold uppercase tracking-wider text-[var(--muted)] hover:text-foreground self-start sm:self-auto"
+                        aria-expanded={isExpanded}
+                      >
+                        {isExpanded ? "Hide Details ▲" : "View Details ▼"}
+                      </button>
+                    )}
+                  </div>
+
+                  <p className="mt-2.5 text-sm sm:text-base leading-relaxed text-[var(--muted)] text-pretty">
+                    {item.description}
+                  </p>
+
+                  {/* Interactive Expandable Key Deliverables */}
+                  {isExpanded && bullets && (
+                    <div className="mt-4 border border-[var(--border)] bg-[var(--background)] p-4 text-xs sm:text-sm text-[var(--muted)]">
+                      <p className="font-semibold text-foreground mb-2">Key Contributions & Architecture:</p>
+                      <ul className="list-disc pl-4 space-y-1.5">
+                        {bullets.map((b) => (
+                          <li key={b}>{b}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* Focus Areas */}
+                  <ul
+                    className="mt-4 flex flex-wrap gap-1.5 sm:gap-2"
+                    aria-label={`Core technologies used at ${item.company}`}
+                  >
+                    {item.focus.map((area) => (
+                      <li className="tag" key={area}>
+                        {area}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            );
+          })}
+        </div>
       </div>
     </Section>
   );

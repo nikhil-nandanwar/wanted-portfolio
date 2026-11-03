@@ -1,0 +1,195 @@
+{
+  "version": 1,
+  "skills": {
+    "deploy-to-vercel": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/deploy-to-vercel/SKILL.md",
+      "computedHash": "9b883827e904cd6c93a98457f1ea5aaae1dfdb30ae704bddf5e9e70c9d10de36"
+    },
+    "seo": {
+      "source": "./claude-seo/skills",
+      "sourceType": "local",
+      "computedHash": "d46a7f061833e59087f66a83af135ec18241320ed3bb01deb96b74b8ec4106c1"
+    },
+    "seo-agentic": {
+      "source": "./claude-seo/skills",
+      "sourceType": "local",
+      "computedHash": "5409fd0a6fc577ec04ad2e11a46a4468a7b1408a1e56341aac9e7acdb363ef86"
+    },
+    "seo-audit": {
+      "source": "./claude-seo/skills",
+      "sourceType": "local",
+      "computedHash": "3f4b3bc1b8ae2b55beece95f813eb6fda37fe09bd819a990af9316ab8ace7a20"
+    },
+    "seo-backlinks": {
+      "source": "./claude-seo/skills",
+      "sourceType": "local",
+      "computedHash": "9ba7defd1856502a117aaa1bc1dcaa88a5a19315a475c39b2f5202eb8ba10f61"
+    },
+    "seo-cluster": {
+      "source": "./claude-seo/skills",
+      "sourceType": "local",
+      "computedHash": "6902bcac793e5885ddccd015a21591933ed1adfbd733aeb4fadad9a7302cbfe7"
+    },
+    "seo-competitor-pages": {
+      "source": "./claude-seo/skills",
+      "sourceType": "local",
+      "computedHash": "168268b3faeba0d0aa46ef85ebd8ca453a711d18d0a8017bc9ca9e5bd1f3f34c"
+    },
+    "seo-content": {
+      "source": "./claude-seo/skills",
+      "sourceType": "local",
+      "computedHash": "963aedce5e47cc74f1dece9ce2e9a0c23366a90ad480e8f465afb4c0410c490f"
+    },
+    "seo-content-brief": {
+      "source": "./claude-seo/skills",
+      "sourceType": "local",
+      "computedHash": "52a2b0e7688a62c8f09994b216d71819e467a32e6e472ca06da2887d02b26a9d"
+    },
+    "seo-dataforseo": {
+      "source": "./claude-seo/skills",
+      "sourceType": "local",
+      "computedHash": "06de99bfc22f51dd01f5c2077bde22d4a2914330c1bf269f85b1f5d9fc04ce3a"
+    },
+    "seo-drift": {
+      "source": "./claude-seo/skills",
+      "sourceType": "local",
+      "computedHash": "a5b6098b66f51d07cb0f9fd72b024d1aaa88dbfb7ec0db73f668db14ef76dfb0"
+    },
+    "seo-ecommerce": {
+      "source": "./claude-seo/skills",
+      "sourceType": "local",
+      "computedHash": "ab97fa0d0599eb1ef0f0d33daa575e10dbb60741d99b75195e75f5b5963f4489"
+    },
+    "seo-flow": {
+      "source": "./claude-seo/skills",
+      "sourceType": "local",
+      "computedHash": "69e8883e639652f3d91b305768a0998e26f2318a8f622d1984f8613db9f88a62"
+    },
+    "seo-geo": {
+      "source": "./claude-seo/skills",
+      "sourceType": "local",
+      "computedHash": "a06855d7ffff1089112910756814aaf4b7ca0206ea19bc3cadb1f8831441482f"
+    },
+    "seo-geo-aeo": {
+      "source": "SNLabat/SEO-GEO-AEO-Skill",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "1dd97f1b2559fc0fd815ff99149880ed3d4f005f6d7aeeba371ff19dd5744010"
+    },
+    "seo-google": {
+      "source": "./claude-seo/skills",
+      "sourceType": "local",
+      "computedHash": "1dda4aaa6fe2310e9e7d09b3a104587384953286dc8eb91766604774b6fafead"
+    },
+    "seo-hreflang": {
+      "source": "./claude-seo/skills",
+      "sourceType": "local",
+      "computedHash": "1d097daa1d12b7e446d9d5c372204b7049ca8f95f966a9f0e63cb0f7f40a6db3"
+    },
+    "seo-image-gen": {
+      "source": "./claude-seo/skills",
+      "sourceType": "local",
+      "computedHash": "0f3599a008f5e2d3c80935f91057b10875c7ca39780aa4d4d98b7a7e766ec689"
+    },
+    "seo-images": {
+      "source": "./claude-seo/skills",
+      "sourceType": "local",
+      "computedHash": "32422c310c925b9d7a7c4972deeb96b76901cf620dc35480886b3cf7cb5c4aac"
+    },
+    "seo-local": {
+      "source": "./claude-seo/skills",
+      "sourceType": "local",
+      "computedHash": "f6eed4c6512ed1ba1f82aa932b246d5f3d836690f9292a7fc162b37ba5250979"
+    },
+    "seo-maps": {
+      "source": "./claude-seo/skills",
+      "sourceType": "local",
+      "computedHash": "d28e8e8edddbff7e2edb683e23e8cf1c0581fe438bc5efeb68a3e2e2eeea16ad"
+    },
+    "seo-page": {
+      "source": "./claude-seo/skills",
+      "sourceType": "local",
+      "computedHash": "45087654327cad7ee05a95e8d392ee915410500b7c2c40bffe06c0972c4f1758"
+    },
+    "seo-plan": {
+      "source": "./claude-seo/skills",
+      "sourceType": "local",
+      "computedHash": "3e7e2250748ce524bc87cd0f5e6f465716a6e914e7786d35ab7d0ae6776c27c9"
+    },
+    "seo-programmatic": {
+      "source": "./claude-seo/skills",
+      "sourceType": "local",
+      "computedHash": "6edd7ddef62e3bf6bf07bc0adee153fd2d67b693723fb1280961e46bfbb75f68"
+    },
+    "seo-schema": {
+      "source": "./claude-seo/skills",
+      "sourceType": "local",
+      "computedHash": "73e80636bf1acddd15f16dacbbdf000c150894ad0e323171306f9359efb379d6"
+    },
+    "seo-sitemap": {
+      "source": "./claude-seo/skills",
+      "sourceType": "local",
+      "computedHash": "3aa575cf0b14e1f6df9614954ae225fec406d156eeb6cb31342fe73ef9fe3421"
+    },
+    "seo-sxo": {
+      "source": "./claude-seo/skills",
+      "sourceType": "local",
+      "computedHash": "c404d666d5536970224010b9ae8e305f5a30b0b90ae85f4ee350dc726e0971e1"
+    },
+    "seo-technical": {
+      "source": "./claude-seo/skills",
+      "sourceType": "local",
+      "computedHash": "475824303c22a8ad7008672db53fe40431a48984b61949f8994d3e6a985678a8"
+    },
+    "vercel-cli-with-tokens": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/vercel-cli-with-tokens/SKILL.md",
+      "computedHash": "eb16b20dcbe6ce51e0372083d624e0847af1b09487ec99249227d5a8eddebfc0"
+    },
+    "vercel-composition-patterns": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/composition-patterns/SKILL.md",
+      "computedHash": "575757e3e25761c8c562d6e395d29f0b76c98b1273c0bd72d88e6ab1bc9c7d42"
+    },
+    "vercel-optimize": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/vercel-optimize/SKILL.md",
+      "computedHash": "ad0ef9c5c980f824e2ec19cba5c45426aba923a17e71fbaf6d1830574b62cc44"
+    },
+    "vercel-react-best-practices": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/react-best-practices/SKILL.md",
+      "computedHash": "ca7b0c0c6e5f2750043f7f0cd72d16ac4e2abc48f9b5500d047a4b77a2506212"
+    },
+    "vercel-react-native-skills": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/react-native-skills/SKILL.md",
+      "computedHash": "41d24eafa7c3d82e270439808f7cfbc4d51aeb2d14f2809a2267c16275784d06"
+    },
+    "vercel-react-view-transitions": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/react-view-transitions/SKILL.md",
+      "computedHash": "fb654c297f52c2771ce64b22a4a18509d0412ef07e020bc09625441df18a750d"
+    },
+    "web-design-guidelines": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/web-design-guidelines/SKILL.md",
+      "computedHash": "f3bc47f890f42a44db1007ab390709ec368e4b8c089baee6b0007182236ac474"
+    },
+    "writing-guidelines": {
+      "source": "vercel-labs/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/writing-guidelines/SKILL.md",
+      "computedHash": "25aa3a33a97bddbcb1847ce4a6169106ec25e5b19b15b99c66e75ab383866ef2"
+    }
+  }
+}

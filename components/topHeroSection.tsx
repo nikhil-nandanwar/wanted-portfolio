@@ -1,86 +1,102 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Section from "@/components/section";
 
 export default function TopHeroSection() {
-  return (
-    <Section id="top" labelledBy="hero-heading">
-      <div className="flex flex-col items-center text-center">
-        {/* Status badge */}
-        {/* <div className="animate-fade-in-up mt-8 sm:mt-12 md:mt-6">
-          <span className="inline-flex items-center gap-2.5 rounded-full border border-foreground/10 bg-foreground/[0.03] px-3.5 py-1.5 text-xs font-medium tracking-wide text-foreground/60 sm:px-4 sm:py-2">
-            <span
-              className="animate-pulse-dot size-2 rounded-full bg-[var(--accent)]"
-              aria-hidden="true"
-            />
-            Open to opportunities
-          </span>
-        </div> */}
+  const [copied, setCopied] = useState(false);
+  const [istTime, setIstTime] = useState("");
 
-        {/* Main heading */}
+  // Live Bangalore Time (IST: UTC+5:30)
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      const options: Intl.DateTimeFormatOptions = {
+        timeZone: "Asia/Kolkata",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true,
+      };
+      setIstTime(new Intl.DateTimeFormat("en-IN", options).format(now));
+    };
+
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText("contact@nixhil.dev");
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    } catch {
+      // Fallback
+    }
+  };
+
+  return (
+    <Section id="top" labelledBy="hero-heading" className="pt-8 sm:pt-16 lg:pt-24">
+      <div className="flex flex-col items-start text-left max-w-4xl">
+        {/* Confident Fluid Headline */}
         <h1
           id="hero-heading"
-          className="animate-fade-in-up delay-100 mt-8 mb-5 max-w-5xl text-center text-3xl font-bold leading-[1.12] tracking-tight sm:mt-12 sm:mb-6 sm:text-5xl md:text-6xl lg:text-7xl"
+          className="text-3xl xs:text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-foreground leading-[1.08] text-balance"
         >
-          <span className="sr-only">Nikhil Nandanwar, full stack developer: </span>
-          Full Stack Developer{" "}
-          <span className="gradient-text">building products</span>{" "}
-          that users love.
+          Full-stack developer building resilient software.
         </h1>
 
-        {/* Subheading */}
-        <p className="animate-fade-in-up delay-200 m-0 max-w-2xl text-center text-sm leading-6 text-foreground/50 sm:text-lg sm:leading-8">
-          I&apos;m Nikhil — I design and engineer web & mobile apps with
-          React, Next.js, Node.js, and .NET. Clean code, sharp UI, fast
-          delivery.
+        {/* Supporting Narrative */}
+        <p className="mt-5 sm:mt-6 max-w-2xl text-base sm:text-lg lg:text-xl leading-relaxed text-[var(--muted)] text-pretty">
+          I&apos;m Nikhil Nandanwar. I engineer end-to-end web and mobile applications with
+          React, Next.js, Node.js, and .NET — focusing on high performance, thorough accessibility,
+          and clean systems architecture.
         </p>
 
-        {/* CTA buttons */}
-        <div className="animate-fade-in-up delay-300 mt-8 flex w-full max-w-xs flex-col items-center justify-center gap-3 sm:mt-10 sm:max-w-none sm:w-auto sm:flex-row sm:flex-wrap">
+        {/* Interactive Responsive Action Buttons */}
+        <div className="mt-8 sm:mt-10 flex w-full flex-col sm:flex-row sm:w-auto sm:flex-wrap items-stretch sm:items-center gap-3 sm:gap-4">
           <Link
-            className="glow-hover flex min-h-12 w-full items-center justify-center rounded-xl bg-foreground px-6 text-sm font-semibold tracking-wide text-background transition-all duration-300 hover:opacity-85 sm:w-auto"
+            className="btn-press flex h-12 w-full sm:w-auto items-center justify-center bg-foreground px-7 text-sm font-semibold tracking-wide text-background hover:bg-foreground/90"
             href="#projects"
           >
-            View my work
-            <span className="ml-3" aria-hidden="true">↓</span>
+            Explore Projects
           </Link>
-          <Link
-            className="flex min-h-12 w-full items-center justify-center rounded-xl border border-foreground/20 px-6 text-sm font-medium tracking-wide transition-all duration-200 hover:border-foreground hover:bg-foreground hover:text-background sm:w-auto"
-            href="#contact"
+
+          {/* Interactive Copy Email Button */}
+          <button
+            type="button"
+            onClick={copyEmail}
+            className="btn-press flex h-12 w-full sm:w-auto items-center justify-center border border-[var(--border-strong)] bg-transparent px-5 text-sm font-semibold tracking-wide text-foreground hover:bg-foreground/5 relative"
+            aria-live="polite"
           >
-            Get in touch
-            <span className="ml-3" aria-hidden="true">↗</span>
-          </Link>
+            {copied ? (
+              <span className="inline-flex items-center gap-2 text-emerald-600 dark:text-emerald-400">
+                <svg className="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                Copied contact@nixhil.dev
+              </span>
+            ) : (
+              <span className="inline-flex items-center gap-2">
+                <svg className="size-4 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75" />
+                </svg>
+                Copy Email
+              </span>
+            )}
+          </button>
+
           <Link
-            className="flex min-h-12 w-full items-center justify-center rounded-xl px-4 text-sm font-medium text-foreground/40 transition-colors hover:text-foreground sm:w-auto"
+            className="btn-press flex h-12 w-full sm:w-auto items-center justify-center border border-[var(--border)] px-5 text-sm font-medium text-[var(--muted)] hover:text-foreground hover:bg-foreground/5"
             href="/documents/Nikhil_Nandanwar_Full_Stack_Developer.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Download Resume →
+            Download CV
             <span className="sr-only"> (opens in a new tab)</span>
           </Link>
-        </div>
-
-        {/* Key stats for quick scanning */}
-        <div className="animate-fade-in-up delay-400 mt-12 grid w-full max-w-3xl grid-cols-2 gap-3 sm:mt-20 sm:grid-cols-4 sm:gap-6">
-          {[
-            { value: "3+", label: "Internships" },
-            { value: "16", label: "Technologies" },
-            { value: "3+", label: "Years Coding" },
-            { value: "5+", label: "Shipped Projects" },
-          ].map((stat) => (
-            <div
-              key={stat.label}
-              className="glass rounded-xl p-3 text-center transition-all duration-300 hover:border-[var(--border-hover)] sm:px-5 sm:py-4"
-            >
-              <p className="text-xl font-bold tracking-tight sm:text-3xl">
-                {stat.value}
-              </p>
-              <p className="mt-1 text-[0.65rem] font-medium uppercase tracking-wider text-foreground/40 sm:text-[0.7rem]">
-                {stat.label}
-              </p>
-            </div>
-          ))}
         </div>
       </div>
     </Section>

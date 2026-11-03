@@ -1,91 +1,222 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Section from "@/components/section";
 import { projects } from "@/data/site";
 
+const categories = ["All", "Full Stack", "AI & LLM", "Interactive Web"];
+
+const projectDetails: Record<string, { architecture: string; highlights: string[] }> = {
+  "ShareVault - Secure Sharing Platform": {
+    architecture: "React frontend, Node.js REST API, MongoDB document store, Cloudflare R2 object storage.",
+    highlights: [
+      "Ephemeral 6-digit code generation for zero-credential transfers",
+      "Direct-to-storage signed upload links avoiding server memory bottleneck",
+      "Automatic expiration TTL indexes on MongoDB records",
+    ],
+  },
+  "GeminiChat - AI Chat Application": {
+    architecture: "React SPA with streaming text decoder, Node.js backend proxy, Google Gemini 1.5 API.",
+    highlights: [
+      "Streamed chunk-by-chunk token rendering with auto-scroll handling",
+      "Persistent thread storage with markdown and code syntax rendering",
+      "Thread export and shareable conversation URLs",
+    ],
+  },
+  "Mines Game - Minesweeper Game": {
+    architecture: "Vanilla modern JavaScript, zero-dependency DOM matrix, CSS custom property rendering.",
+    highlights: [
+      "Optimized flood-fill reveal algorithm with recursive boundary checking",
+      "Adjustable grid dimensions and custom mine density probabilities",
+      "Zero layout shift timer and flag counter with high contrast accessibility",
+    ],
+  },
+};
+
 export default function ProjectDisplaySection() {
+  const [activeFilter, setActiveFilter] = useState("All");
+  const [expandedDetails, setExpandedDetails] = useState<Record<string, boolean>>({});
+
+  const toggleDetails = (title: string) => {
+    setExpandedDetails((prev) => ({
+      ...prev,
+      [title]: !prev[title],
+    }));
+  };
+
+  const filteredProjects = projects.filter((project) => {
+    if (activeFilter === "All") return true;
+    if (activeFilter === "Full Stack") return project.tags.includes("Node.js") || project.tags.includes("MongoDB");
+    if (activeFilter === "AI & LLM") return project.tags.includes("Google Gemini");
+    if (activeFilter === "Interactive Web") return project.tags.includes("JavaScript");
+    return true;
+  });
+
   return (
     <Section id="projects" labelledBy="projects-heading">
-      <p className="m-0 text-xs font-semibold uppercase tracking-widest text-foreground/40">
-        Featured Projects
-      </p>
-      <h2
-        id="projects-heading"
-        className="mt-3 text-2xl font-bold leading-tight tracking-tight sm:mt-4 sm:text-3xl md:text-4xl"
-      >
-        Things I&apos;ve built.
-      </h2>
+      <div className="border-t border-[var(--border)] pt-12 sm:pt-16 lg:pt-20">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 pb-8 sm:pb-12">
+          <div>
+            <h2
+              id="projects-heading"
+              className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-foreground text-balance"
+            >
+              Featured Applications
+            </h2>
+            <p className="mt-3 max-w-xl text-sm sm:text-base leading-relaxed text-[var(--muted)] text-pretty">
+              Production web applications engineered with clean architectural separation, robust error boundaries, and accessible interactions.
+            </p>
+          </div>
 
-      <div className="mt-10 grid gap-6 sm:mt-14 sm:gap-8 md:gap-10">
-        {projects.map((project) => (
-          <article
-            key={project.number}
-            className="glass glow-hover group overflow-hidden rounded-2xl transition-all duration-300 hover:border-[var(--accent)]/40"
+          {/* Interactive Category Filter Pills */}
+          <div
+            className="flex flex-wrap items-center gap-1.5 sm:gap-2"
+            role="tablist"
+            aria-label="Filter projects by category"
           >
-            <div className="grid gap-0 lg:grid-cols-2">
-              {/* Project screenshot */}
-              <div className="relative overflow-hidden bg-foreground/5">
-                <Image
-                  src={project.image}
-                  alt={`Screenshot of ${project.title}`}
-                  width={1920}
-                  height={892}
-                  sizes="(min-width: 1024px) 50vw, 100vw"
-                  className="aspect-video h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-
-              {/* Project details */}
-              <div className="flex flex-col justify-center p-5 sm:p-8 lg:p-10">
-                <span className="text-xs font-bold tracking-wider text-foreground/30">
-                  PROJECT {project.number}
-                </span>
-                <h3 className="mt-2.5 mb-3 text-lg font-bold leading-tight tracking-tight break-words sm:mt-3 sm:mb-4 sm:text-xl lg:text-2xl">
-                  {project.title}
-                </h3>
-                <p className="m-0 text-sm leading-6 text-foreground/50 sm:leading-7">
-                  {project.description}
-                </p>
-
-                {/* Tech tags */}
-                <ul
-                  className="mt-4 m-0 flex list-none flex-wrap gap-1.5 p-0 sm:mt-5 sm:gap-2"
-                  aria-label={`Technologies used for ${project.title}`}
+            {categories.map((category) => {
+              const isSelected = activeFilter === category;
+              return (
+                <button
+                  key={category}
+                  type="button"
+                  role="tab"
+                  aria-selected={isSelected}
+                  onClick={() => setActiveFilter(category)}
+                  className={`btn-press px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors ${
+                    isSelected
+                      ? "bg-foreground text-background"
+                      : "border border-[var(--border)] bg-[var(--background)] text-[var(--muted)] hover:text-foreground"
+                  }`}
                 >
-                  {project.tags.map((tag) => (
-                    <li className="tag" key={tag}>
-                      {tag}
-                    </li>
-                  ))}
-                </ul>
+                  {category}
+                </button>
+              );
+            })}
+          </div>
+        </div>
 
-                {/* Action buttons */}
-                <div className="mt-6 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3">
-                  <Link
-                    className="inline-flex min-h-11 items-center justify-center rounded-xl bg-foreground px-5 text-xs font-semibold tracking-wide text-background uppercase transition-all duration-200 hover:opacity-85 sm:min-h-10"
-                    href={project.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+        {/* Projects List */}
+        <div className="space-y-10 sm:space-y-14">
+          {filteredProjects.map((project, index) => {
+            const isReversed = index % 2 === 1;
+            const extra = projectDetails[project.title];
+            const isExpanded = !!expandedDetails[project.title];
+
+            return (
+              <article
+                key={project.title}
+                className="card overflow-hidden transition-shadow hover:border-[var(--border-strong)]"
+              >
+                <div className="grid lg:grid-cols-12 gap-0 items-stretch">
+                  {/* Screenshot Visual */}
+                  <div
+                    className={`lg:col-span-7 bg-[var(--background)] flex items-center justify-center p-4 sm:p-6 lg:p-8 ${
+                      isReversed ? "lg:order-2" : "lg:order-1"
+                    }`}
                   >
-                    Live Demo
-                    <span className="ml-2" aria-hidden="true">↗</span>
-                    <span className="sr-only"> for {project.title} (opens in a new tab)</span>
-                  </Link>
-                  <Link
-                    className="inline-flex min-h-11 items-center justify-center rounded-xl border border-foreground/20 px-5 text-xs font-medium tracking-wide uppercase transition-all duration-200 hover:border-foreground hover:bg-foreground hover:text-background sm:min-h-10"
-                    href={project.code}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    <div className="img-frame w-full overflow-hidden bg-black/5 dark:bg-white/5">
+                      <Image
+                        src={project.image}
+                        alt={`Screenshot preview of ${project.title}`}
+                        width={1920}
+                        height={1080}
+                        sizes="(min-width: 1024px) 58vw, 100vw"
+                        className="w-full h-auto object-cover transition-transform duration-300 hover:scale-[1.01]"
+                        priority={index === 0}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Project Details */}
+                  <div
+                    className={`lg:col-span-5 flex flex-col justify-between p-5 sm:p-7 lg:p-9 border-t lg:border-t-0 ${
+                      isReversed
+                        ? "lg:order-1 lg:border-r lg:border-[var(--border)]"
+                        : "lg:order-2 lg:border-l lg:border-[var(--border)]"
+                    }`}
                   >
-                    Source Code
-                    <span className="ml-2" aria-hidden="true">↗</span>
-                    <span className="sr-only"> for {project.title} (opens in a new tab)</span>
-                  </Link>
+                    <div>
+                      <div className="flex items-start justify-between gap-2">
+                        <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-foreground">
+                          {project.title}
+                        </h3>
+                      </div>
+
+                      <p className="mt-3 text-sm sm:text-base leading-relaxed text-[var(--muted)] text-pretty">
+                        {project.description}
+                      </p>
+
+                      {/* Tech tags */}
+                      <ul
+                        className="mt-5 flex flex-wrap gap-1.5"
+                        aria-label={`Technologies used for ${project.title}`}
+                      >
+                        {project.tags.map((tag) => (
+                          <li className="tag" key={tag}>
+                            {tag}
+                          </li>
+                        ))}
+                      </ul>
+
+                      {/* Interactive Architecture Dropdown */}
+                      {extra && (
+                        <div className="mt-5 border-t border-[var(--border)] pt-4">
+                          <button
+                            type="button"
+                            onClick={() => toggleDetails(project.title)}
+                            aria-expanded={isExpanded}
+                            className="btn-press flex items-center justify-between w-full text-xs font-semibold uppercase tracking-wider text-[var(--muted)] hover:text-foreground"
+                          >
+                            <span>Architecture & Engineering Notes</span>
+                            <span className="text-xs">{isExpanded ? "▲ Hide" : "▼ View"}</span>
+                          </button>
+
+                          {isExpanded && (
+                            <div className="mt-3 space-y-2 text-xs leading-relaxed text-[var(--muted)] bg-[var(--background)] p-3.5 border border-[var(--border)]">
+                              <p className="font-semibold text-foreground">
+                                Stack: <span className="font-normal text-[var(--muted)]">{extra.architecture}</span>
+                              </p>
+                              <ul className="list-disc pl-4 space-y-1">
+                                {extra.highlights.map((h) => (
+                                  <li key={h}>{h}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Action buttons */}
+                    <div className="mt-6 flex flex-col sm:flex-row sm:items-center gap-2.5 pt-4 border-t border-[var(--border)]">
+                      <Link
+                        className="btn-press flex min-h-11 sm:min-h-10 items-center justify-center bg-foreground px-5 text-xs font-semibold tracking-wide text-background uppercase"
+                        href={project.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Launch Application
+                        <span className="sr-only"> for {project.title} (opens in a new tab)</span>
+                      </Link>
+                      <Link
+                        className="btn-press flex min-h-11 sm:min-h-10 items-center justify-center border border-[var(--border-strong)] bg-transparent px-5 text-xs font-semibold tracking-wide text-foreground uppercase hover:bg-foreground/5"
+                        href={project.code}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Source Repository
+                        <span className="sr-only"> for {project.title} (opens in a new tab)</span>
+                      </Link>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </article>
-        ))}
+              </article>
+            );
+          })}
+        </div>
       </div>
     </Section>
   );
