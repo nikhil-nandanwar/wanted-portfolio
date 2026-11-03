@@ -84,7 +84,7 @@ export default function TopNavbarSection() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-colors duration-200 border-b ${
+      className={`sticky top-0 z-50 w-full transition-colors duration-200 border-b  ${
         scrolled
           ? "border-[var(--border)] bg-[var(--background)]/95 backdrop-blur-md"
           : "border-transparent bg-[var(--background)]"

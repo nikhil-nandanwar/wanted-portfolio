@@ -14,7 +14,7 @@ export const projects = [
     description:
       "A secure file and text sharing application enabling users to share content with anyone using a simple 6-digit code. Built with modern web technologies for fast, secure, and hassle-free sharing experiences.",
     tags: ["React", "Node.js", "MongoDB", "Cloudflare R2"],
-    image: "/assets/onlineClipboard.webp",
+    image: "/assets/onlineClipboard.png",
     code: "https://github.com/nikhil-nandanwar/ShareVault",
     href: "https://share-vault-mango.vercel.app/",
   },
