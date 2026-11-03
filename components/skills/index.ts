@@ -15,11 +15,12 @@ import { Git } from "./git";
 import { Expo } from "./expo";
 import { TailwindCSS } from "./tailwindCss";
 import { Nextjs } from "./nextJs";
+import { TypeScript } from "./typescript";
 
 type Icon = ComponentType<SVGProps<SVGSVGElement>>;
 
 export const skillIcons: Record<string, Icon> = {
-  HTML5, CSS3: CSS, JavaScript, React, "Node.js": Nodejs, "C#": C,
+  HTML5, CSS3: CSS, JavaScript, TypeScript, React, "Node.js": Nodejs, "C#": C,
   ".NET": MicrosoftNET, Angular, MongoDB, "C++": Cpp, SQL: PostgreSQL,
   Docker, Git, "React Native": Expo, TailwindCSS, "Next.js": Nextjs,
 };

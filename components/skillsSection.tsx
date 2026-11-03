@@ -19,7 +19,7 @@ const categories = [
     id: "frontend",
     title: "Frontend & Mobile",
     description: "Responsive interfaces, state synchronization, accessible components, and cross-platform mobile apps.",
-    items: ["React", "Next.js", "React Native", "Angular", "TailwindCSS", "JavaScript", "HTML5", "CSS3"],
+    items: ["React", "Next.js", "React Native", "Angular", "TailwindCSS", "JavaScript", "TypeScript", "HTML5", "CSS3"],
   },
   {
     id: "backend",
@@ -118,7 +118,7 @@ export default function SkillsSection() {
 
         {/* Skills Grid */}
         <div className="card p-6 sm:p-8">
-          <p className="text-xs sm:text-sm text-[var(--muted)] mb-6">
+          <p className="text-xs sm:text-sm text-muted mb-6">
             {currentCategory.description}
           </p>
 
@@ -131,7 +131,7 @@ export default function SkillsSection() {
               return (
                 <li
                   key={skill}
-                  className="btn-press group flex items-center gap-3 border border-[var(--border)] bg-[var(--background)] p-3 transition-colors hover:border-[var(--border-strong)]"
+                  className="btn-press group flex items-center gap-3 border border-border bg-background p-3 transition-colors hover:border-[var(--border-strong)]"
                 >
                   {Icon && (
                     <Icon
