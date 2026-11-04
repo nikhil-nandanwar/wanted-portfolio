@@ -3,7 +3,7 @@ import Section from "@/components/section";
 export default function AboutSection() {
   return (
     <Section id="about" labelledBy="about-heading">
-      <div className="border-t border-[var(--border)] pt-12 sm:pt-16 lg:pt-20">
+      <div className="border-t border-border pt-12 sm:pt-16 lg:pt-20">
         <h2
           id="about-heading"
           className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-foreground text-balance pb-6 sm:pb-8"
@@ -17,15 +17,15 @@ export default function AboutSection() {
             <p className="text-lg xs:text-xl sm:text-2xl font-bold leading-snug tracking-tight text-foreground text-balance">
               I believe great software is built at the intersection of robust architecture, strict accessibility, and deliberate design.
             </p>
-            <div className="mt-6 sm:mt-8 space-y-2.5 border-l-2 border-[var(--accent)] pl-4 text-xs sm:text-sm font-medium text-[var(--muted)]">
-              <p>📍 Location: Bangalore, Karnataka, India</p>
-              <p>⚡ Stack: React, Next.js, Node.js, .NET, Full-Stack Architecture</p>
-              <p>🤝 Focus: Scalable web applications & mobile experiences</p>
+            <div className="mt-6 sm:mt-8 space-y-2.5 border-l-2 border-accent pl-4 text-xs sm:text-sm font-medium text-muted sr-only ">
+              <p> Location: Bangalore, Karnataka, India</p>
+              <p> Stack: React, Next.js, Node.js, .NET, Full-Stack Architecture</p>
+              <p> Focus: Scalable web applications & mobile experiences</p>
             </div>
           </div>
 
           {/* Narrative paragraphs */}
-          <div className="lg:col-span-7 space-y-5 sm:space-y-6 text-sm sm:text-base leading-relaxed text-[var(--muted)] text-pretty">
+          <div className="lg:col-span-7 space-y-5 sm:space-y-6 text-sm sm:text-base leading-relaxed text-muted text-pretty">
             <p>
               My background spans engineering frontend applications with React and Next.js, implementing
               cross-platform mobile clients with React Native, and architecting backend services with Node.js and .NET.

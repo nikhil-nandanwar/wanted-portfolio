@@ -86,8 +86,8 @@ export default function TopNavbarSection() {
     <header
       className={`sticky top-0 z-50 w-full transition-colors duration-200 border-b  ${
         scrolled
-          ? "border-[var(--border)] bg-[var(--background)]/95 backdrop-blur-md"
-          : "border-transparent bg-[var(--background)]"
+          ? "border-border bg-(--background)/95 backdrop-blur-md"
+          : "border-transparent bg-background"
       }`}
     >
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-6 md:px-8 lg:px-10">
@@ -115,14 +115,14 @@ export default function TopNavbarSection() {
                 className={`relative py-1 text-xs uppercase tracking-wider font-semibold transition-colors ${
                   isActive
                     ? "text-foreground font-bold"
-                    : "text-[var(--muted)] hover:text-foreground"
+                    : "text-muted hover:text-foreground"
                 }`}
                 {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               >
                 {link.label}
                 {isActive && (
                   <span
-                    className="absolute inset-x-0 -bottom-1 h-0.5 bg-[var(--accent)]"
+                    className="absolute inset-x-0 -bottom-1 h-0.5 bg-accent"
                     aria-hidden="true"
                   />
                 )}
@@ -138,7 +138,7 @@ export default function TopNavbarSection() {
           <button
             type="button"
             onClick={toggleTheme}
-            className="btn-press flex size-9 items-center justify-center border border-[var(--border)] text-foreground hover:bg-foreground/5"
+            className="btn-press flex size-9 items-center justify-center border border-border text-foreground hover:bg-foreground/5"
             aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
             title={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
           >
@@ -170,7 +170,7 @@ export default function TopNavbarSection() {
           <button
             type="button"
             onClick={toggleTheme}
-            className="btn-press flex size-10 items-center justify-center border border-[var(--border)] text-foreground hover:bg-foreground/5"
+            className="btn-press flex size-10 items-center justify-center border border-border text-foreground hover:bg-foreground/5"
             aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
           >
             {theme === "dark" ? (
@@ -187,7 +187,7 @@ export default function TopNavbarSection() {
           {/* Menu Hamburger / Close */}
           <button
             type="button"
-            className="btn-press flex size-10 items-center justify-center border border-[var(--border)] text-foreground hover:bg-foreground/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground"
+            className="btn-press flex size-10 items-center justify-center border border-border text-foreground hover:bg-foreground/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-foreground"
             onClick={() => setMobileMenuOpen((prev) => !prev)}
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-navigation"
@@ -210,12 +210,12 @@ export default function TopNavbarSection() {
       {mobileMenuOpen && (
         <div
           id="mobile-navigation"
-          className="fixed inset-x-0 top-16 bottom-0 z-40 flex flex-col justify-between bg-[var(--background)] px-6 py-6 overflow-y-auto lg:hidden border-t border-[var(--border)]"
+          className="fixed inset-x-0 top-16 bottom-0 z-40 flex flex-col justify-between bg-background px-6 py-6 overflow-y-auto lg:hidden border-t border-border"
           role="dialog"
           aria-modal="true"
           aria-label="Mobile Navigation"
         >
-          <div className="flex flex-col divide-y divide-[var(--border)]">
+          <div className="flex flex-col divide-y divide-border">
             {navLinks.map((link) => {
               const isActive = !link.external && activeSection === link.id;
               return (
@@ -224,12 +224,12 @@ export default function TopNavbarSection() {
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`flex min-h-12 items-center justify-between py-3 text-base font-semibold tracking-tight transition-colors ${
-                    isActive ? "text-[var(--accent)]" : "text-foreground hover:text-[var(--accent)]"
+                    isActive ? "text-accent" : "text-foreground hover:text-accent"
                   }`}
                   {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 >
                   <span>{link.label}</span>
-                  <span className="text-xs text-[var(--muted)]" aria-hidden="true">
+                  <span className="text-xs text-muted" aria-hidden="true">
                     {link.external ? "↗" : "→"}
                   </span>
                 </Link>
@@ -250,7 +250,7 @@ export default function TopNavbarSection() {
             <Link
               href="mailto:contact@nixhil.dev"
               onClick={() => setMobileMenuOpen(false)}
-              className="btn-press flex min-h-12 w-full items-center justify-center border border-[var(--border-strong)] bg-transparent text-xs font-semibold uppercase tracking-wider text-foreground"
+              className="btn-press flex min-h-12 w-full items-center justify-center border border-(--border-strong) bg-transparent text-xs font-semibold uppercase tracking-wider text-foreground"
             >
               contact@nixhil.dev
             </Link>

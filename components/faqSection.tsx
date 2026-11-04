@@ -20,7 +20,7 @@ export default function FAQSection() {
 
   return (
     <Section id="faq" labelledBy="faq-heading">
-      <div className="border-t border-[var(--border)] pt-12 sm:pt-16 lg:pt-20">
+      <div className="border-t border-border pt-12 sm:pt-16 lg:pt-20">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 pb-8 sm:pb-10">
           <div>
             <h2
@@ -29,7 +29,7 @@ export default function FAQSection() {
             >
               Frequently Asked Questions
             </h2>
-            <p className="mt-3 max-w-xl text-sm sm:text-base leading-relaxed text-[var(--muted)] text-pretty">
+            <p className="mt-3 max-w-xl text-sm sm:text-base leading-relaxed text-muted text-pretty">
               Quick answers concerning technical expertise, employment history, and collaborative workflow.
             </p>
           </div>
@@ -45,7 +45,7 @@ export default function FAQSection() {
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="Search questions..."
-              className="h-10 w-full border border-[var(--border)] bg-[var(--background)] px-3 text-xs placeholder:text-[var(--muted)] text-foreground focus:outline-none focus:border-[var(--accent)]"
+              className="h-10 w-full border border-border bg-background px-3 text-xs placeholder:text-muted text-foreground focus:outline-none focus:border-accent"
             />
           </div>
         </div>
@@ -69,7 +69,7 @@ export default function FAQSection() {
                     {item.question}
                   </span>
                   <span
-                    className={`flex size-6 shrink-0 items-center justify-center border border-[var(--border)] text-xs text-foreground transition-transform duration-200 ${
+                    className={`flex size-6 shrink-0 items-center justify-center border border-border text-xs text-foreground transition-transform duration-200 ${
                       isOpen ? "rotate-45" : ""
                     }`}
                     aria-hidden="true"
@@ -79,8 +79,8 @@ export default function FAQSection() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 pb-5 sm:px-6 sm:pb-6 pt-0 border-t border-[var(--border)]">
-                    <p className="pt-4 text-sm sm:text-base leading-relaxed text-[var(--muted)] text-pretty">
+                  <div className="px-5 pb-5 sm:px-6 sm:pb-6 pt-0 border-t border-border">
+                    <p className="pt-4 text-sm sm:text-base leading-relaxed text-muted text-pretty">
                       {item.answer}
                     </p>
                   </div>
@@ -90,7 +90,7 @@ export default function FAQSection() {
           })}
 
           {filteredFaqs.length === 0 && (
-            <div className="card p-8 text-center text-sm text-[var(--muted)]">
+            <div className="card p-8 text-center text-sm text-muted">
               No questions found matching &ldquo;{searchTerm}&rdquo;. Feel free to email contact@nixhil.dev directly.
             </div>
           )}

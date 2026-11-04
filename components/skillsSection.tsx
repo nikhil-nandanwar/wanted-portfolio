@@ -47,7 +47,7 @@ export default function SkillsSection() {
 
   return (
     <Section id="skills" labelledBy="skills-heading">
-      <div className="border-t border-[var(--border)] pt-12 sm:pt-16 lg:pt-20">
+      <div className="border-t border-border pt-12 sm:pt-16 lg:pt-20">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 pb-8 sm:pb-10">
           <div>
             <h2
@@ -56,7 +56,7 @@ export default function SkillsSection() {
             >
               Technical Capabilities
             </h2>
-            <p className="mt-3 max-w-xl text-sm sm:text-base leading-relaxed text-[var(--muted)] text-pretty">
+            <p className="mt-3 max-w-xl text-sm sm:text-base leading-relaxed text-muted text-pretty">
               Full-stack toolset spanning client engineering, backend service orchestration, distributed databases, and containerization.
             </p>
           </div>
@@ -73,13 +73,13 @@ export default function SkillsSection() {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="Filter tech stack..."
-                className="h-10 w-full border border-[var(--border)] bg-[var(--background)] px-3 text-xs placeholder:text-[var(--muted)] text-foreground focus:outline-none focus:border-[var(--accent)]"
+                className="h-10 w-full border border-border bg-background px-3 text-xs placeholder:text-muted text-foreground focus:outline-none focus:border-accent"
               />
               {searchTerm && (
                 <button
                   type="button"
                   onClick={() => setSearchTerm("")}
-                  className="absolute right-2 top-2.5 text-xs text-[var(--muted)] hover:text-foreground"
+                  className="absolute right-2 top-2.5 text-xs text-muted hover:text-foreground"
                   aria-label="Clear skill search"
                 >
                   ✕
@@ -107,7 +107,7 @@ export default function SkillsSection() {
                 className={`btn-press px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors ${
                   isSelected
                     ? "bg-foreground text-background"
-                    : "border border-[var(--border)] bg-[var(--background)] text-[var(--muted)] hover:text-foreground"
+                    : "border border-border bg-background text-muted hover:text-foreground"
                 }`}
               >
                 {cat.title.split("&")[0]}
@@ -131,7 +131,7 @@ export default function SkillsSection() {
               return (
                 <li
                   key={skill}
-                  className="btn-press group flex items-center gap-3 border border-border bg-background p-3 transition-colors hover:border-[var(--border-strong)]"
+                  className="btn-press group flex items-center gap-3 border border-border bg-background p-3 transition-colors hover:border-(--border-strong)"
                 >
                   {Icon && (
                     <Icon
@@ -148,7 +148,7 @@ export default function SkillsSection() {
           </ul>
 
           {displayedSkills.length === 0 && (
-            <p className="text-sm text-[var(--muted)] py-8 text-center">
+            <p className="text-sm text-muted py-8 text-center">
               No matching technologies found for &ldquo;{searchTerm}&rdquo;.
             </p>
           )}

@@ -36,7 +36,7 @@ export default function ExperienceSection() {
 
   return (
     <Section id="experience" labelledBy="experience-heading">
-      <div className="border-t border-[var(--border)] pt-12 sm:pt-16 lg:pt-20">
+      <div className="border-t border-border pt-12 sm:pt-16 lg:pt-20">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 pb-8 sm:pb-12">
           <div>
             <h2
@@ -45,13 +45,13 @@ export default function ExperienceSection() {
             >
               Work Experience
             </h2>
-            <p className="mt-3 max-w-xl text-sm sm:text-base leading-relaxed text-[var(--muted)] text-pretty">
+            <p className="mt-3 max-w-xl text-sm sm:text-base leading-relaxed text-muted text-pretty">
               Proven engineering background across fast-paced product teams, enterprise architectures, and distributed systems.
             </p>
           </div>
         </div>
 
-        <div className="divide-y divide-[var(--border)] border-y border-[var(--border)]">
+        <div className="divide-y divide-border border-y border-border">
           {experience.map((item) => {
             const isExpanded = expandedCompany === item.company;
             const bullets = achievements[item.company];
@@ -66,7 +66,7 @@ export default function ExperienceSection() {
                   <p className="text-base font-bold tracking-tight text-foreground">
                     {item.company}
                   </p>
-                  <p className="text-xs font-medium tabular-nums text-[var(--muted)]">
+                  <p className="text-xs font-medium tabular-nums text-muted">
                     <time dateTime={item.start}>
                       {monthYear.format(new Date(`${item.start}-01`))}
                     </time>{" "}
@@ -88,7 +88,7 @@ export default function ExperienceSection() {
                       <button
                         type="button"
                         onClick={() => toggleCompany(item.company)}
-                        className="btn-press text-xs font-semibold uppercase tracking-wider text-[var(--muted)] hover:text-foreground self-start sm:self-auto"
+                        className="btn-press text-xs font-semibold uppercase tracking-wider text-muted hover:text-foreground self-start sm:self-auto"
                         aria-expanded={isExpanded}
                       >
                         {isExpanded ? "Hide Details ▲" : "View Details ▼"}
@@ -96,13 +96,13 @@ export default function ExperienceSection() {
                     )}
                   </div>
 
-                  <p className="mt-2.5 text-sm sm:text-base leading-relaxed text-[var(--muted)] text-pretty">
+                  <p className="mt-2.5 text-sm sm:text-base leading-relaxed text-muted text-pretty">
                     {item.description}
                   </p>
 
                   {/* Interactive Expandable Key Deliverables */}
                   {isExpanded && bullets && (
-                    <div className="mt-4 border border-[var(--border)] bg-[var(--background)] p-4 text-xs sm:text-sm text-[var(--muted)]">
+                    <div className="mt-4 border border-border bg-background p-4 text-xs sm:text-sm text-muted">
                       <p className="font-semibold text-foreground mb-2">Key Contributions & Architecture:</p>
                       <ul className="list-disc pl-4 space-y-1.5">
                         {bullets.map((b) => (

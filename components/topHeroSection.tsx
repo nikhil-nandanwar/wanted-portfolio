@@ -49,7 +49,7 @@ export default function TopHeroSection() {
         </h1>
 
         {/* Supporting Narrative */}
-        <p className="mt-5 sm:mt-6 max-w-2xl text-base sm:text-lg lg:text-xl leading-relaxed text-[var(--muted)] text-pretty">
+        <p className="mt-5 sm:mt-6 max-w-2xl text-base sm:text-lg lg:text-xl leading-relaxed text-muted text-pretty">
           I&apos;m Nikhil Nandanwar. I engineer end-to-end web and mobile applications with
           React, Next.js, Node.js, and .NET — focusing on high performance, thorough accessibility,
           and clean systems architecture.
@@ -68,7 +68,7 @@ export default function TopHeroSection() {
           <button
             type="button"
             onClick={copyEmail}
-            className="btn-press flex h-12 w-full sm:w-auto items-center justify-center border border-[var(--border-strong)] bg-transparent px-5 text-sm font-semibold tracking-wide text-foreground hover:bg-foreground/5 relative"
+            className="btn-press flex h-12 w-full sm:w-auto items-center justify-center border border-(--border-strong) bg-transparent px-5 text-sm font-semibold tracking-wide text-foreground hover:bg-foreground/5 relative"
             aria-live="polite"
           >
             {copied ? (
@@ -89,7 +89,7 @@ export default function TopHeroSection() {
           </button>
 
           <Link
-            className="btn-press flex h-12 w-full sm:w-auto items-center justify-center border border-[var(--border)] px-5 text-sm font-medium text-[var(--muted)] hover:text-foreground hover:bg-foreground/5"
+            className="btn-press flex h-12 w-full sm:w-auto items-center justify-center border border-border px-5 text-sm font-medium text-muted hover:text-foreground hover:bg-foreground/5"
             href="/documents/Nikhil_Nandanwar_Full_Stack_Developer.pdf"
             target="_blank"
             rel="noopener noreferrer"

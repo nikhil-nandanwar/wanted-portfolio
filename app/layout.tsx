@@ -108,7 +108,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="alternate" type="text/markdown" href="/index.md" />
       </head>
-      <body className="min-h-full flex flex-col selection:bg-[var(--accent)] selection:text-white">
+      <body className="min-h-full flex flex-col selection:bg-accent selection:text-white">
         <a
           className="absolute left-4 top-4 z-100 -translate-y-20 bg-foreground px-4 py-2.5 text-xs font-semibold uppercase tracking-wider text-background transition-transform focus:translate-y-0 rounded-none border border-foreground focus:outline-none focus:ring-2 focus:ring-accent"
           href="#main-content"

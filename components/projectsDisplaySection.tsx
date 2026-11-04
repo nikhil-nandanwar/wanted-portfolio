@@ -56,7 +56,7 @@ export default function ProjectDisplaySection() {
 
   return (
     <Section id="projects" labelledBy="projects-heading">
-      <div className="border-t border-[var(--border)] pt-12 sm:pt-16 lg:pt-20">
+      <div className="border-t border-border pt-12 sm:pt-16 lg:pt-20">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 pb-8 sm:pb-12">
           <div>
             <h2
@@ -65,7 +65,7 @@ export default function ProjectDisplaySection() {
             >
               Featured Applications
             </h2>
-            <p className="mt-3 max-w-xl text-sm sm:text-base leading-relaxed text-[var(--muted)] text-pretty">
+            <p className="mt-3 max-w-xl text-sm sm:text-base leading-relaxed text-muted text-pretty">
               Production web applications engineered with clean architectural separation, robust error boundaries, and accessible interactions.
             </p>
           </div>
@@ -88,7 +88,7 @@ export default function ProjectDisplaySection() {
                   className={`btn-press px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors ${
                     isSelected
                       ? "bg-foreground text-background"
-                      : "border border-[var(--border)] bg-[var(--background)] text-[var(--muted)] hover:text-foreground"
+                      : "border border-border bg-background text-muted hover:text-foreground"
                   }`}
                 >
                   {category}
@@ -108,12 +108,12 @@ export default function ProjectDisplaySection() {
             return (
               <article
                 key={project.title}
-                className="card overflow-hidden transition-shadow hover:border-[var(--border-strong)]"
+                className="card overflow-hidden transition-shadow hover:border-(--border-strong)"
               >
                 <div className="grid lg:grid-cols-12 gap-0 items-stretch">
                   {/* Screenshot Visual */}
                   <div
-                    className={`lg:col-span-7 bg-[var(--background)] flex items-center justify-center p-4 sm:p-6 lg:p-8 ${
+                    className={`lg:col-span-7 bg-background flex items-center justify-center p-4 sm:p-6 lg:p-8 ${
                       isReversed ? "lg:order-2" : "lg:order-1"
                     }`}
                   >
@@ -134,8 +134,8 @@ export default function ProjectDisplaySection() {
                   <div
                     className={`lg:col-span-5 flex flex-col justify-between p-5 sm:p-7 lg:p-9 border-t lg:border-t-0 ${
                       isReversed
-                        ? "lg:order-1 lg:border-r lg:border-[var(--border)]"
-                        : "lg:order-2 lg:border-l lg:border-[var(--border)]"
+                        ? "lg:order-1 lg:border-r lg:border-border"
+                        : "lg:order-2 lg:border-l lg:border-border"
                     }`}
                   >
                     <div>
@@ -145,7 +145,7 @@ export default function ProjectDisplaySection() {
                         </h3>
                       </div>
 
-                      <p className="mt-3 text-sm sm:text-base leading-relaxed text-[var(--muted)] text-pretty">
+                      <p className="mt-3 text-sm sm:text-base leading-relaxed text-muted text-pretty">
                         {project.description}
                       </p>
 
@@ -163,21 +163,21 @@ export default function ProjectDisplaySection() {
 
                       {/* Interactive Architecture Dropdown */}
                       {extra && (
-                        <div className="mt-5 border-t border-[var(--border)] pt-4">
+                        <div className="mt-5 border-t border-border pt-4">
                           <button
                             type="button"
                             onClick={() => toggleDetails(project.title)}
                             aria-expanded={isExpanded}
-                            className="btn-press flex items-center justify-between w-full text-xs font-semibold uppercase tracking-wider text-[var(--muted)] hover:text-foreground"
+                            className="btn-press flex items-center justify-between w-full text-xs font-semibold uppercase tracking-wider text-muted hover:text-foreground"
                           >
                             <span>Architecture & Engineering Notes</span>
                             <span className="text-xs">{isExpanded ? "▲ Hide" : "▼ View"}</span>
                           </button>
 
                           {isExpanded && (
-                            <div className="mt-3 space-y-2 text-xs leading-relaxed text-[var(--muted)] bg-[var(--background)] p-3.5 border border-[var(--border)]">
+                            <div className="mt-3 space-y-2 text-xs leading-relaxed text-muted bg-background p-3.5 border border-border">
                               <p className="font-semibold text-foreground">
-                                Stack: <span className="font-normal text-[var(--muted)]">{extra.architecture}</span>
+                                Stack: <span className="font-normal text-muted">{extra.architecture}</span>
                               </p>
                               <ul className="list-disc pl-4 space-y-1">
                                 {extra.highlights.map((h) => (
@@ -191,7 +191,7 @@ export default function ProjectDisplaySection() {
                     </div>
 
                     {/* Action buttons */}
-                    <div className="mt-6 flex flex-col sm:flex-row sm:items-center gap-2.5 pt-4 border-t border-[var(--border)]">
+                    <div className="mt-6 flex flex-col sm:flex-row sm:items-center gap-2.5 pt-4 border-t border-border">
                       <Link
                         className="btn-press flex min-h-11 sm:min-h-10 items-center justify-center bg-foreground px-5 text-xs font-semibold tracking-wide text-background uppercase"
                         href={project.href}
@@ -202,7 +202,7 @@ export default function ProjectDisplaySection() {
                         <span className="sr-only"> for {project.title} (opens in a new tab)</span>
                       </Link>
                       <Link
-                        className="btn-press flex min-h-11 sm:min-h-10 items-center justify-center border border-[var(--border-strong)] bg-transparent px-5 text-xs font-semibold tracking-wide text-foreground uppercase hover:bg-foreground/5"
+                        className="btn-press flex min-h-11 sm:min-h-10 items-center justify-center border border-(--border-strong) bg-transparent px-5 text-xs font-semibold tracking-wide text-foreground uppercase hover:bg-foreground/5"
                         href={project.code}
                         target="_blank"
                         rel="noopener noreferrer"
