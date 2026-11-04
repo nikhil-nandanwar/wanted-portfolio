@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
+import { SITE, SITE_DESCRIPTION, SITE_NAME } from "@/data/site";
 
-const siteName = "Nikhil Nandanwar";
-const siteDescription =
-  "Nikhil Nandanwar is a full stack developer building thoughtful, accessible web applications with React, Node.js, MongoDB, and Next.js. Explore his work.";
 const socialImage = {
-  url: "https://www.nixhil.dev/assets/preview-social.webp",
+  url: `${SITE}/assets/preview-social.webp`,
   width: 1200,
   height: 630,
   alt: "Nikhil Nandanwar full stack developer portfolio",
@@ -18,16 +16,16 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.nixhil.dev"),
+  metadataBase: new URL(SITE),
   title: {
-    default: "Nikhil Nandanwar | Full Stack Developer",
+    default: "Nikhil Nandanwar | Full Stack Developer in Bangalore",
     template: "%s | Nikhil Nandanwar",
   },
-  description: siteDescription,
+  description: SITE_DESCRIPTION,
   applicationName: "Nikhil Nandanwar Portfolio",
-  authors: [{ name: "Nikhil Nandanwar", url: "https://www.nixhil.dev" }],
-  creator: "Nikhil Nandanwar",
-  publisher: "Nikhil Nandanwar",
+  authors: [{ name: SITE_NAME, url: SITE }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
   keywords: [
     "Nikhil Nandanwar",
     "Full Stack Developer",
@@ -42,10 +40,7 @@ export const metadata: Metadata = {
   category: "technology",
   alternates: {
     canonical: "/",
-    types: {
-      "application/rss+xml": [],
-      "text/markdown": "/index.md",
-    },
+    types: { "text/markdown": "/index.md" },
   },
   robots: {
     index: true,
@@ -59,10 +54,10 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    url: "https://www.nixhil.dev",
-    title: "Full Stack Developer | Nikhil Nandanwar",
-    description: siteDescription,
-    siteName,
+    url: SITE,
+    title: "Full Stack Developer in Bangalore | Nikhil Nandanwar",
+    description: SITE_DESCRIPTION,
+    siteName: SITE_NAME,
     locale: "en_IN",
     images: [socialImage],
     type: "profile",
@@ -74,8 +69,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     creator: "@nixhil_",
     site: "@nixhil_",
-    title: "Full Stack Developer | Nikhil Nandanwar",
-    description: siteDescription,
+    title: "Full Stack Developer in Bangalore | Nikhil Nandanwar",
+    description: SITE_DESCRIPTION,
     images: [socialImage],
   },
   icons: {
@@ -107,6 +102,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <head>
         <link rel="alternate" type="text/markdown" href="/index.md" />
+        <link rel="alternate" type="text/plain" href="/llms.txt" />
       </head>
       <body className="min-h-full flex flex-col selection:bg-accent selection:text-white">
         <a

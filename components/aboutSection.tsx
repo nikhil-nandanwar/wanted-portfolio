@@ -17,10 +17,10 @@ export default function AboutSection() {
             <p className="text-lg xs:text-xl sm:text-2xl font-bold leading-snug tracking-tight text-foreground text-balance">
               I believe great software is built at the intersection of robust architecture, strict accessibility, and deliberate design.
             </p>
-            <div className="mt-6 sm:mt-8 space-y-2.5 border-l-2 border-accent pl-4 text-xs sm:text-sm font-medium text-muted sr-only ">
-              <p> Location: Bangalore, Karnataka, India</p>
-              <p> Stack: React, Next.js, Node.js, .NET, Full-Stack Architecture</p>
-              <p> Focus: Scalable web applications & mobile experiences</p>
+            <div className="mt-6 sm:mt-8 space-y-2.5 border-l-2 border-accent pl-4 text-xs sm:text-sm font-medium text-muted">
+              <p>Location: Bangalore, Karnataka, India</p>
+              <p>Stack: React, Next.js, Node.js, .NET, full-stack architecture</p>
+              <p>Focus: Scalable web applications and mobile experiences</p>
             </div>
           </div>
 

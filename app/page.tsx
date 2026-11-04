@@ -6,7 +6,15 @@ import TopNavbarSection from "@/components/topNavbarSection";
 import ExperienceSection from "@/components/experienceSection";
 import AboutSection from "@/components/aboutSection";
 import FAQSection from "@/components/faqSection";
-import { faqItems, projects, DATE_CREATED, LAST_MODIFIED, SITE } from "@/data/site";
+import {
+  faqItems,
+  projects,
+  DATE_CREATED,
+  LAST_MODIFIED,
+  SITE,
+  SITE_DESCRIPTION,
+  SITE_NAME,
+} from "@/data/site";
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -14,13 +22,12 @@ const structuredData = {
     {
       "@type": "Person",
       "@id": `${SITE}/#person`,
-      name: "Nikhil Nandanwar",
+      name: SITE_NAME,
       alternateName: ["Nikhil", "nixhil", "nikhil-nandanwar"],
       url: SITE,
       image: `${SITE}/assets/preview-social.webp`,
       jobTitle: "Full Stack Developer",
-      description:
-        "Full stack developer building accessible web and mobile applications which are fast, scalable, and user-friendly. Skilled in React, Next.js, Node.js, .NET, MongoDB, and more.",
+      description: SITE_DESCRIPTION,
       email: "contact@nixhil.dev",
       address: { "@type": "PostalAddress", addressLocality: "Bangalore", addressRegion: "Karnataka", addressCountry: "IN" },
       nationality: { "@type": "Country", name: "India" },
@@ -42,7 +49,7 @@ const structuredData = {
       "@type": "WebSite",
       "@id": `${SITE}/#website`,
       url: SITE,
-      name: "Nikhil Nandanwar",
+      name: SITE_NAME,
       alternateName: "nixhil.dev",
       publisher: { "@id": `${SITE}/#person` },
       inLanguage: "en-IN",
@@ -52,8 +59,7 @@ const structuredData = {
       "@id": `${SITE}/#webpage`,
       url: SITE,
       name: "Nikhil Nandanwar | Full Stack Developer",
-      description:
-        "Full stack developer building accessible web and mobile applications which are fast, scalable, and user-friendly. Skilled in React, Next.js, Node.js, .NET, MongoDB, and more.",
+      description: SITE_DESCRIPTION,
 
       isPartOf: { "@id": `${SITE}/#website` },
       about: { "@id": `${SITE}/#person` },

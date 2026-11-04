@@ -19,7 +19,7 @@ export default function FAQSection() {
   };
 
   return (
-    <Section id="faq" labelledBy="faq-heading" className="sr-only">
+    <Section id="faq" labelledBy="faq-heading">
       <div className="border-t border-border pt-12 sm:pt-16 lg:pt-20">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 pb-8 sm:pb-10">
           <div>

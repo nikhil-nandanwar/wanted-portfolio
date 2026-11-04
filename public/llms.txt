@@ -1,10 +1,11 @@
-# Nikhil Nandanwar
-> Full stack developer from India building accessible web and mobile apps with React, Next.js, Node.js, MongoDB, Angular and .NET.
+# Nikhil Nandanwar — Full Stack Developer
+> Nikhil Nandanwar is a full stack developer in Bangalore, India building accessible, high-performance web and mobile applications with React, Next.js, Node.js, MongoDB, Angular, and .NET.
 
 ## Key pages
-- [Portfolio](https://www.nixhil.dev/): about, skills, projects, experience, contact
-- [Blog](https://blogs.nixhil.dev/): articles by Nikhil
-- [Resume](https://drive.google.com/file/d/1MORUESGlncs5203DXM_q7Sq6imkNaXYK/view)
+- [Portfolio](https://www.nixhil.dev/): canonical profile with skills, projects, work experience, FAQ, and contact details
+- [Markdown portfolio](https://www.nixhil.dev/index.md): concise machine-readable portfolio content
+- [Blog](https://blogs.nixhil.dev/): technical articles by Nikhil
+- [Resume](https://www.nixhil.dev/documents/Nikhil_Nandanwar_Full_Stack_Developer.pdf): downloadable CV
 
 ## Profiles
 - [GitHub](https://github.com/nikhil-nandanwar)
@@ -13,3 +14,9 @@
 
 ## Contact
 contact@nixhil.dev
+
+## Focus areas
+- Accessible and performance-focused web applications
+- React, Next.js, TypeScript, Node.js, and .NET
+- React Native mobile applications
+- REST APIs, microservices, MongoDB, Docker, and cloud deployment

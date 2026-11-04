@@ -1,10 +1,10 @@
-import type { NextRequest } from "next/server";
 import {
   skills,
   projects,
   experience,
   faqItems,
   SITE,
+  SITE_DESCRIPTION,
   LAST_MODIFIED,
 } from "@/data/site";
 
@@ -35,7 +35,7 @@ function buildMarkdown(): string {
 
   return `# Nikhil Nandanwar — Full Stack Developer
 
-> Personal portfolio of Nikhil Nandanwar (nixhil), a full stack developer from Bangalore, India.
+> ${SITE_DESCRIPTION}
 > Site: ${SITE} | Last updated: ${LAST_MODIFIED}
 
 ---
@@ -76,7 +76,7 @@ ${faqRows}
 `;
 }
 
-export async function GET(_req: NextRequest): Promise<Response> {
+export async function GET(): Promise<Response> {
   const markdown = buildMarkdown();
   const tokens = countTokens(markdown);
 
@@ -84,6 +84,9 @@ export async function GET(_req: NextRequest): Promise<Response> {
     status: 200,
     headers: {
       "Content-Type": "text/markdown; charset=utf-8",
+      "Vary": "Accept",
+      "Link": '</index.md>; rel="alternate"; type="text/markdown"',
+      "Content-Signal": "search=yes, ai-input=yes, ai-train=yes",
       "x-markdown-tokens": String(tokens),
       // Cache for 1 hour; serve stale while revalidating in background
       "Cache-Control": "public, max-age=3600, stale-while-revalidate=86400",

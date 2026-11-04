@@ -1,6 +1,9 @@
 export const SITE = "https://www.nixhil.dev";
+export const SITE_NAME = "Nikhil Nandanwar";
+export const SITE_DESCRIPTION =
+  "Nikhil Nandanwar is a full stack developer in Bangalore, India building accessible, high-performance web and mobile applications with React, Next.js, Node.js, and .NET.";
 export const DATE_CREATED = "2026-09-23T22:40:32+05:30";
-export const LAST_MODIFIED = "2026-10-09T22:40:32+05:30";
+export const LAST_MODIFIED = "2026-11-04T19:40:52+05:30";
 
 export const skills = [
   "HTML5", "CSS3", "JavaScript", "React", "Node.js", "C#", ".NET",
