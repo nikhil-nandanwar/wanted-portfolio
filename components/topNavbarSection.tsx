@@ -9,7 +9,6 @@ const navLinks = [
   { id: "skills", label: "Skills", href: "#skills" },
   { id: "experience", label: "Experience", href: "#experience" },
   { id: "about", label: "About", href: "#about" },
-  { id: "faq", label: "FAQ", href: "#faq" },
   { id: "blog", label: "Blog", href: "https://blogs.nixhil.dev/", external: true },
 ];
 
@@ -44,7 +43,7 @@ export default function TopNavbarSection() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
 
-      const sectionIds = ["top", "projects", "skills", "experience", "about", "faq"];
+      const sectionIds = ["top", "projects", "skills", "experience", "about"];
       const scrollPosition = window.scrollY + 200;
 
       for (let i = sectionIds.length - 1; i >= 0; i--) {

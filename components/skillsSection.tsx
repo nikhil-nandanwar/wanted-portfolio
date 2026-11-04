@@ -11,8 +11,8 @@ const categories = [
     description: "Complete full-stack toolset used across production web and native mobile codebases.",
     items: [
       "React", "Next.js", "React Native", "Node.js", ".NET", "C#", "MongoDB",
-      "Angular", "Docker", "SQL", "TailwindCSS", "JavaScript", "TypeScript",
-      "Git", "HTML5", "CSS3", "C++"
+      "Angular", "Docker", "SQL", "PostgreSQL", "Express.js", "TailwindCSS",
+      "JavaScript", "TypeScript", "Git", "VS Code", "HTML5", "CSS3", "C++"
     ],
   },
   {
@@ -25,13 +25,13 @@ const categories = [
     id: "backend",
     title: "Backend & Systems",
     description: "Microservices architectures, REST & GraphQL endpoints, relational and document persistence.",
-    items: ["Node.js", "C#", ".NET", "MongoDB", "SQL", "C++"],
+    items: ["Node.js", "Express.js", "C#", ".NET", "MongoDB", "SQL", "PostgreSQL", "C++"],
   },
   {
     id: "devops",
     title: "DevOps & Tooling",
     description: "Dockerized containerization, version control branching strategies, and CI/CD automation.",
-    items: ["Docker", "Git"],
+    items: ["Docker", "Git", "VS Code"],
   },
 ];
 

@@ -4,8 +4,8 @@ export const LAST_MODIFIED = "2026-10-09T22:40:32+05:30";
 
 export const skills = [
   "HTML5", "CSS3", "JavaScript", "React", "Node.js", "C#", ".NET",
-  "Angular", "MongoDB", "C++", "SQL", "Docker", "Git", "React Native",
-  "TailwindCSS", "Next.js",
+  "Angular", "MongoDB", "C++", "SQL", "PostgreSQL", "Express.js", "Docker",
+  "Git", "VS Code", "React Native", "TailwindCSS", "Next.js", "TypeScript",
 ];
 
 export const projects = [
