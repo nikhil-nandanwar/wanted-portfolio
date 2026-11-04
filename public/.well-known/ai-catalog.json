@@ -1,0 +1,53 @@
+{
+  "@context": "https://www.w3.org/ns/hydra/core#",
+  "@id": "https://www.nixhil.dev/.well-known/ai-catalog.json",
+  "schema_version": "1.0",
+  "site": "https://www.nixhil.dev",
+  "name": "Nikhil Nandanwar Portfolio",
+  "description": "Portfolio of Nikhil Nandanwar, full stack developer in Bangalore, India. Contains biography, skills, work experience, projects, and contact details.",
+  "publisher": {
+    "name": "Nikhil Nandanwar",
+    "url": "https://www.nixhil.dev",
+    "email": "contact@nixhil.dev"
+  },
+  "content_access": {
+    "policy": "public",
+    "ai_train": true,
+    "ai_input": true,
+    "search": true
+  },
+  "resources": [
+    {
+      "name": "Portfolio Home",
+      "url": "https://www.nixhil.dev/",
+      "media_type": "text/html",
+      "description": "Full portfolio including biography, skills, projects, experience, and FAQ"
+    },
+    {
+      "name": "Markdown Portfolio",
+      "url": "https://www.nixhil.dev/index.md",
+      "media_type": "text/markdown",
+      "description": "Machine-readable markdown version of portfolio content"
+    },
+    {
+      "name": "LLM Index",
+      "url": "https://www.nixhil.dev/llms.txt",
+      "media_type": "text/plain",
+      "description": "Structured llms.txt index for AI crawlers"
+    },
+    {
+      "name": "Full LLM Documentation",
+      "url": "https://www.nixhil.dev/llms-full.txt",
+      "media_type": "text/plain",
+      "description": "Comprehensive markdown context for AI agents with full project architectures and career history"
+    },
+    {
+      "name": "Resume",
+      "url": "https://www.nixhil.dev/documents/Nikhil_Nandanwar_Full_Stack_Developer.pdf",
+      "media_type": "application/pdf",
+      "description": "Downloadable PDF resume/CV"
+    }
+  ],
+  "last_updated": "2026-11-04T19:40:52+05:30"
+}
+

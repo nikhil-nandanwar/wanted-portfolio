@@ -46,12 +46,16 @@ export default function ExperienceSection() {
               Work Experience
             </h2>
             <p className="mt-3 max-w-xl text-sm sm:text-base leading-relaxed text-muted text-pretty">
-              Proven engineering background across fast-paced product teams, enterprise architectures, and distributed systems.
+              Engineering background across fast-paced product teams, enterprise architectures, and distributed systems.
             </p>
           </div>
         </div>
 
-        <div className="divide-y divide-border border-y border-border">
+        <div
+          className="divide-y divide-border border-y border-border"
+          itemScope
+          itemType="https://schema.org/Person"
+        >
           {experience.map((item) => {
             const isExpanded = expandedCompany === item.company;
             const bullets = achievements[item.company];
@@ -60,18 +64,26 @@ export default function ExperienceSection() {
               <article
                 key={`${item.company}-${item.role}`}
                 className="py-6 sm:py-8 grid gap-4 md:grid-cols-12 md:gap-8 items-start transition-colors"
+                itemScope
+                itemType="https://schema.org/OrganizationRole"
+                itemProp="worksFor"
               >
                 {/* Date & Company (left column) */}
                 <div className="md:col-span-4 space-y-1">
-                  <p className="text-base font-bold tracking-tight text-foreground">
-                    {item.company}
+                  <p
+                    className="text-base font-bold tracking-tight text-foreground"
+                    itemScope
+                    itemType="https://schema.org/Organization"
+                    itemProp="worksFor"
+                  >
+                    <span itemProp="name">{item.company}</span>
                   </p>
                   <p className="text-xs font-medium tabular-nums text-muted">
-                    <time dateTime={item.start}>
+                    <time dateTime={item.start} itemProp="startDate">
                       {monthYear.format(new Date(`${item.start}-01`))}
                     </time>{" "}
                     —{" "}
-                    <time dateTime={item.end}>
+                    <time dateTime={item.end} itemProp="endDate">
                       {monthYear.format(new Date(`${item.end}-01`))}
                     </time>
                   </p>
@@ -80,7 +92,10 @@ export default function ExperienceSection() {
                 {/* Role & Description (right column) */}
                 <div className="md:col-span-8">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                    <h3 className="text-base sm:text-lg font-bold tracking-tight text-foreground">
+                    <h3
+                      className="text-base sm:text-lg font-bold tracking-tight text-foreground"
+                      itemProp="roleName"
+                    >
                       {item.role}
                     </h3>
 
@@ -90,20 +105,29 @@ export default function ExperienceSection() {
                         onClick={() => toggleCompany(item.company)}
                         className="btn-press text-xs font-semibold uppercase tracking-wider text-muted hover:text-foreground self-start sm:self-auto"
                         aria-expanded={isExpanded}
+                        aria-controls={`details-${item.company.replace(/\s+/g, "-")}`}
                       >
                         {isExpanded ? "Hide Details ▲" : "View Details ▼"}
                       </button>
                     )}
                   </div>
 
-                  <p className="mt-2.5 text-sm sm:text-base leading-relaxed text-muted text-pretty">
+                  <p
+                    className="mt-2.5 text-sm sm:text-base leading-relaxed text-muted text-pretty"
+                    itemProp="description"
+                  >
                     {item.description}
                   </p>
 
                   {/* Interactive Expandable Key Deliverables */}
-                  {isExpanded && bullets && (
-                    <div className="mt-4 border border-border bg-background p-4 text-xs sm:text-sm text-muted">
-                      <p className="font-semibold text-foreground mb-2">Key Contributions & Architecture:</p>
+                  {bullets && (
+                    <div
+                      id={`details-${item.company.replace(/\s+/g, "-")}`}
+                      className={`mt-4 border border-border bg-background p-4 text-xs sm:text-sm text-muted transition-all duration-200 ${
+                        isExpanded ? "" : "hidden"
+                      }`}
+                    >
+                      <p className="font-semibold text-foreground mb-2">Key Contributions &amp; Architecture:</p>
                       <ul className="list-disc pl-4 space-y-1.5">
                         {bullets.map((b) => (
                           <li key={b}>{b}</li>

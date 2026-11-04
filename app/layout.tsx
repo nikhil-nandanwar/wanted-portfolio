@@ -7,7 +7,7 @@ const socialImage = {
   url: `${SITE}/assets/preview-social.webp`,
   width: 1200,
   height: 630,
-  alt: "Nikhil Nandanwar full stack developer portfolio",
+  alt: "Nikhil Nandanwar – Full Stack Developer portfolio preview",
 };
 
 const geistSans = Geist({
@@ -28,19 +28,27 @@ export const metadata: Metadata = {
   publisher: SITE_NAME,
   keywords: [
     "Nikhil Nandanwar",
-    "Full Stack Developer",
-    "React",
-    "Next.js",
-    "Node.js",
-    ".NET",
-    "TypeScript",
-    "Portfolio",
-    "Software Engineer",
+    "Full Stack Developer Bangalore",
+    "Full Stack Engineer India",
+    "React Developer",
+    "Next.js Developer",
+    "Node.js Developer",
+    ".NET Developer",
+    "TypeScript Developer",
+    "Angular Developer",
+    "React Native Developer",
+    "hire full stack developer India",
+    "web developer Bangalore",
+    "software engineer portfolio",
+    "nixhil.dev",
   ],
   category: "technology",
   alternates: {
     canonical: "/",
-    types: { "text/markdown": "/index.md" },
+    types: {
+      "text/markdown": "/index.md",
+      "text/plain": "/llms.txt",
+    },
   },
   robots: {
     index: true,
@@ -103,6 +111,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="alternate" type="text/markdown" href="/index.md" />
         <link rel="alternate" type="text/plain" href="/llms.txt" />
+        {/* Preconnect for performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
       </head>
       <body className="min-h-full flex flex-col selection:bg-accent selection:text-white">
         <a

@@ -40,7 +40,10 @@ export default function TopHeroSection() {
   return (
     <Section id="top" labelledBy="hero-heading" className="pt-8 sm:pt-16 lg:pt-24">
       <div className="flex flex-col items-start text-left max-w-4xl">
-        {/* Confident Fluid Headline */}
+        {/*
+          H1: Primary keyword target.
+          "Full-stack developer" + name both appear above the fold for fast crawl pickup.
+        */}
         <h1
           id="hero-heading"
           className="text-3xl xs:text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-foreground leading-[1.08] text-balance"
@@ -48,12 +51,25 @@ export default function TopHeroSection() {
           Full-stack developer building resilient software.
         </h1>
 
-        {/* Supporting Narrative */}
+        {/*
+          Supporting paragraph: self-contained, citable intro (~40 words).
+          Leads with the name + location + skills for AI Overview extraction.
+        */}
         <p className="mt-5 sm:mt-6 max-w-2xl text-base sm:text-lg lg:text-xl leading-relaxed text-muted text-pretty">
-          I&apos;m Nikhil Nandanwar. I engineer end-to-end web and mobile applications with
-          React, Next.js, Node.js, and .NET — focusing on high performance, thorough accessibility,
-          and clean systems architecture.
+          I&apos;m{" "}
+          <strong className="text-foreground font-semibold">Nikhil Nandanwar</strong>,
+          a full stack developer based in{" "}
+          <strong className="text-foreground font-semibold">Bangalore, India</strong>.
+          I engineer end-to-end web and mobile applications with React, Next.js, Node.js, and .NET —
+          focusing on high performance, thorough accessibility, and clean systems architecture.
         </p>
+
+        {/* Live IST time — signals freshness to crawlers */}
+        {istTime && (
+          <p className="mt-3 text-xs text-muted tabular-nums" aria-label="Current time in Bangalore">
+            <span aria-hidden="true">🕐 </span>Bangalore time: <time dateTime={new Date().toISOString()}>{istTime}</time>
+          </p>
+        )}
 
         {/* Interactive Responsive Action Buttons */}
         <div className="mt-8 sm:mt-10 flex w-full flex-col sm:flex-row sm:w-auto sm:flex-wrap items-stretch sm:items-center gap-3 sm:gap-4">

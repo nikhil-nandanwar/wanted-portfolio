@@ -50,7 +50,11 @@ export default function FAQSection() {
           </div>
         </div>
 
-        {/* Interactive Accordion List */}
+        {/*
+          Answers are rendered in the DOM even when visually hidden via CSS,
+          so search crawlers and AI agents can read all Q&A content without JS.
+          The `hidden` attribute is NOT used — we use CSS visibility instead.
+        */}
         <div className="space-y-3" role="region" aria-label="FAQ Accordion">
           {filteredFaqs.map((item, index) => {
             const isOpen = openIndex === index;
@@ -58,14 +62,21 @@ export default function FAQSection() {
               <div
                 key={item.question}
                 className="card overflow-hidden transition-colors border"
+                itemScope
+                itemType="https://schema.org/Question"
               >
                 <button
                   type="button"
                   onClick={() => toggleItem(index)}
                   aria-expanded={isOpen}
+                  aria-controls={`faq-answer-${index}`}
+                  id={`faq-question-${index}`}
                   className="btn-press flex w-full items-center justify-between p-5 sm:p-6 text-left"
                 >
-                  <span className="text-base sm:text-lg font-bold tracking-tight text-foreground pr-4">
+                  <span
+                    className="text-base sm:text-lg font-bold tracking-tight text-foreground pr-4"
+                    itemProp="name"
+                  >
                     {item.question}
                   </span>
                   <span
@@ -78,13 +89,29 @@ export default function FAQSection() {
                   </span>
                 </button>
 
-                {isOpen && (
-                  <div className="px-5 pb-5 sm:px-6 sm:pb-6 pt-0 border-t border-border">
-                    <p className="pt-4 text-sm sm:text-base leading-relaxed text-muted text-pretty">
-                      {item.answer}
-                    </p>
-                  </div>
-                )}
+                {/*
+                  Answer is always present in the DOM (not conditionally rendered)
+                  so search engines and AI crawlers can read it without JS.
+                  The CSS `max-h + overflow` pattern hides it visually when closed.
+                */}
+                <div
+                  id={`faq-answer-${index}`}
+                  role="region"
+                  aria-labelledby={`faq-question-${index}`}
+                  className={`border-t border-border transition-all duration-200 ${
+                    isOpen ? "max-h-[1000px] opacity-100" : "max-h-0 overflow-hidden opacity-0"
+                  }`}
+                  itemScope
+                  itemType="https://schema.org/Answer"
+                  itemProp="acceptedAnswer"
+                >
+                  <p
+                    className="px-5 pb-5 sm:px-6 sm:pb-6 pt-4 text-sm sm:text-base leading-relaxed text-muted text-pretty"
+                    itemProp="text"
+                  >
+                    {item.answer}
+                  </p>
+                </div>
               </div>
             );
           })}

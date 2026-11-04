@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Nikhil Nandanwar Portfolio",
+  "name_for_model": "nixhil_portfolio",
+  "description_for_human": "Portfolio of Nikhil Nandanwar, a full stack developer in Bangalore, India.",
+  "description_for_model": "Portfolio site for Nikhil Nandanwar, a full stack developer specialising in React, Next.js, Node.js, .NET, and mobile development. Contains biography, work experience, featured projects, skills, and contact information.",
+  "auth": { "type": "none" },
+  "api": {
+    "type": "openapi",
+    "url": "https://www.nixhil.dev/.well-known/openapi.json",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://www.nixhil.dev/icons/icon-512.png",
+  "contact_email": "contact@nixhil.dev",
+  "legal_info_url": "https://www.nixhil.dev"
+}
+

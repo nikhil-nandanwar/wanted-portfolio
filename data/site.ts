@@ -6,9 +6,9 @@ export const DATE_CREATED = "2026-09-23T22:40:32+05:30";
 export const LAST_MODIFIED = "2026-11-04T19:40:52+05:30";
 
 export const skills = [
-  "HTML5", "CSS3", "JavaScript", "React", "Node.js", "C#", ".NET",
-  "Angular", "MongoDB", "C++", "SQL", "PostgreSQL", "Express.js", "Docker",
-  "Git", "VS Code", "React Native", "TailwindCSS", "Next.js", "TypeScript",
+  "HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js",
+  "Node.js", "Express.js", "C#", ".NET", "Angular", "MongoDB", "PostgreSQL",
+  "SQL", "C++", "Docker", "Git", "React Native", "TailwindCSS", "VS Code",
 ];
 
 export const projects = [
@@ -49,7 +49,7 @@ export const experience = [
     company: "Nabham Tech",
     description:
       "Designed and developed a website and mobile app for recording videos, while also handling the admin panel backend.",
-    focus: ["NextJS", "React Native", "Docker"],
+    focus: ["Next.js", "React Native", "Docker"],
   },
   {
     start: "2026-02",
@@ -66,8 +66,8 @@ export const experience = [
     role: "Frontend Developer Intern",
     company: "Living Pixel Labs",
     description:
-      "Developed the company’s official website and mobile app for the AI chat interface.",
-    focus: ["Product design", "Front-end", "Reactjs", "React Native"],
+      "Developed the company's official website and mobile app for the AI chat interface.",
+    focus: ["Product design", "Front-end", "React.js", "React Native"],
   },
 ];
 
@@ -75,21 +75,31 @@ export const faqItems = [
   {
     question: "Who is Nikhil Nandanwar?",
     answer:
-      "Nikhil Nandanwar is a full stack developer from India who builds accessible web and mobile applications with React, Next.js, Node.js, MongoDB, Angular and .NET.",
+      "Nikhil Nandanwar is a full stack developer based in Bangalore, India who designs and engineers accessible, high-performance web and mobile applications using React, Next.js, Node.js, MongoDB, Angular, and .NET.",
   },
   {
     question: "What technologies does Nikhil Nandanwar work with?",
     answer:
-      "React, Next.js, Node.js, MongoDB, Angular, C#, .NET, React Native, SQL, Docker, Git and TailwindCSS.",
+      "Nikhil works with React, Next.js, TypeScript, Node.js, MongoDB, Angular, C#, .NET, React Native, PostgreSQL, SQL, Docker, Git, and TailwindCSS.",
   },
   {
-    question: "What is Nikhil Nandanwar's experience?",
+    question: "What is Nikhil Nandanwar's work experience?",
     answer:
-      "Internships as a Full Stack Developer at Nabham Tech, a Full Stack Engineer at Cognizant, and a Frontend Developer at Living Pixel Labs.",
+      "Nikhil has interned as a Full Stack Developer at Nabham Tech (Jul–Sep 2026), a Full Stack Engineer at Cognizant (Feb–May 2026) where he built insurance underwriting systems with Angular, C# and .NET microservices, and as a Frontend Developer at Living Pixel Labs (Jun–Oct 2025) building the company website and AI mobile app.",
   },
   {
     question: "How can I hire or contact Nikhil Nandanwar?",
     answer:
-      "Email contact@nixhil.dev or reach out on LinkedIn, GitHub or X.",
+      "Email contact@nixhil.dev, connect on LinkedIn at linkedin.com/in/nandanwar-nikhil, or reach out on GitHub or X (@nixhil_). Nikhil is open to full-time roles, contract projects, and architecture consultations.",
+  },
+  {
+    question: "What kind of projects has Nikhil Nandanwar built?",
+    answer:
+      "Nikhil has built ShareVault (a secure file and text sharing platform using React, Node.js, MongoDB, and Cloudflare R2), GeminiChat (an AI chat application powered by Google Gemini), and Mines Game (a modern Minesweeper implementation). All source code is available on GitHub.",
+  },
+  {
+    question: "Is Nikhil Nandanwar available for freelance or contract work?",
+    answer:
+      "Yes. Nikhil is open to freelance, contract, and full-time engineering opportunities. Contact him at contact@nixhil.dev to discuss your project.",
   },
 ];

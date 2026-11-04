@@ -1,22 +1,49 @@
 # Nikhil Nandanwar — Full Stack Developer
-> Nikhil Nandanwar is a full stack developer in Bangalore, India building accessible, high-performance web and mobile applications with React, Next.js, Node.js, MongoDB, Angular, and .NET.
+
+> Nikhil Nandanwar is a full stack developer based in Bangalore, India who designs and engineers accessible, high-performance web and mobile applications with React, Next.js, Node.js, MongoDB, Angular, and .NET.
 
 ## Key pages
-- [Portfolio](https://www.nixhil.dev/): canonical profile with skills, projects, work experience, FAQ, and contact details
-- [Markdown portfolio](https://www.nixhil.dev/index.md): concise machine-readable portfolio content
-- [Blog](https://blogs.nixhil.dev/): technical articles by Nikhil
-- [Resume](https://www.nixhil.dev/documents/Nikhil_Nandanwar_Full_Stack_Developer.pdf): downloadable CV
 
-## Profiles
-- [GitHub](https://github.com/nikhil-nandanwar)
-- [LinkedIn](https://www.linkedin.com/in/nandanwar-nikhil)
-- [X](https://x.com/nixhil_)
+- [Portfolio](https://www.nixhil.dev/): canonical profile with skills, projects, work experience, FAQ, and contact details
+- [Markdown portfolio](https://www.nixhil.dev/index.md): concise machine-readable portfolio content (Content-Signal: search=yes, ai-input=yes)
+- [Complete LLM documentation](https://www.nixhil.dev/llms-full.txt): comprehensive context with full work details and architecture
+- [Blog](https://blogs.nixhil.dev/): technical articles by Nikhil
+- [Resume / CV](https://www.nixhil.dev/documents/Nikhil_Nandanwar_Full_Stack_Developer.pdf): downloadable PDF resume
+
+## Profiles & social
+
+- [GitHub](https://github.com/nikhil-nandanwar) — open-source projects and code
+- [LinkedIn](https://www.linkedin.com/in/nandanwar-nikhil) — professional profile
+- [X (Twitter)](https://x.com/nixhil_) — @nixhil_
 
 ## Contact
-contact@nixhil.dev
 
-## Focus areas
-- Accessible and performance-focused web applications
-- React, Next.js, TypeScript, Node.js, and .NET
-- React Native mobile applications
-- REST APIs, microservices, MongoDB, Docker, and cloud deployment
+- Email: contact@nixhil.dev
+- Open to: full-time software engineering roles, contract projects, architecture consultations
+
+## Skills
+
+React · Next.js · TypeScript · Node.js · Express.js · C# · .NET · Angular · MongoDB · PostgreSQL · SQL · React Native · Docker · Git · TailwindCSS · HTML5 · CSS3 · JavaScript
+
+## Work experience (most recent first)
+
+- **Full Stack Developer Intern** at Nabham Tech (Jul 2026 – Sep 2026)
+  Built full-stack video recording web portal and React Native mobile app. Stack: Next.js, React Native, Docker.
+
+- **Full Stack Engineer Intern** at Cognizant (Feb 2026 – May 2026)
+  Developed insurance underwriting system with Angular frontend and C# / .NET microservices with RBAC.
+
+- **Frontend Developer Intern** at Living Pixel Labs (Jun 2025 – Oct 2025)
+  Developed company website and AI chat mobile application. Stack: React.js, React Native.
+
+## Featured projects
+
+- **ShareVault** — Secure file and text sharing via 6-digit codes. Stack: React, Node.js, MongoDB, Cloudflare R2. Live: https://share-vault-mango.vercel.app/ Code: https://github.com/nikhil-nandanwar/ShareVault
+
+- **GeminiChat** — AI chat interface powered by Google Gemini with streaming, persistent threads, and shareable conversations. Stack: React, Node.js. Live: https://ai-by-gemini.netlify.app/ Code: https://github.com/nikhil-nandanwar/GeminiApp
+
+- **Mines Game** — Modern Minesweeper game with adjustable difficulty and high-contrast accessibility. Stack: HTML5, CSS3, JavaScript. Live: https://mines-game.netlify.app/ Code: https://github.com/nikhil-nandanwar/Mines
+
+## Licensing
+
+Content on nixhil.dev is published for public search indexing and AI-assisted retrieval. Training use: permitted (ai-train=yes). Search indexing: permitted (search=yes). AI input: permitted (ai-input=yes).

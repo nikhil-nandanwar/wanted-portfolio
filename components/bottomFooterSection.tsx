@@ -33,7 +33,18 @@ export default function BottomFooterSection() {
     <footer
       className="relative flex w-full justify-center border-t border-border bg-background"
       id="contact"
+      itemScope
+      itemType="https://schema.org/Person"
     >
+      {/* Hidden microdata identity signals for search crawlers and AI agents */}
+      <meta itemProp="name" content="Nikhil Nandanwar" />
+      <meta itemProp="jobTitle" content="Full Stack Developer" />
+      <meta itemProp="email" content="contact@nixhil.dev" />
+      <link itemProp="url" href="https://www.nixhil.dev" />
+      <link itemProp="sameAs" href="https://github.com/nikhil-nandanwar" />
+      <link itemProp="sameAs" href="https://www.linkedin.com/in/nandanwar-nikhil" />
+      <link itemProp="sameAs" href="https://x.com/nixhil_" />
+
       <div className="w-full max-w-6xl px-4 py-12 sm:px-6 sm:py-20 lg:px-10">
         {/* Main CTA Container */}
         <div className="card p-6 sm:p-10 lg:p-14">
@@ -42,8 +53,16 @@ export default function BottomFooterSection() {
               Let&apos;s build something enduring.
             </h2>
             <p className="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg leading-relaxed text-muted text-pretty">
-              I am open to software engineering opportunities, contract projects, and architecture consultations.
-              Feel free to reach out directly.
+              Nikhil Nandanwar is open to software engineering opportunities, contract projects, and architecture
+              consultations in Bangalore, India and remotely. Reach out directly at{" "}
+              <a
+                href="mailto:contact@nixhil.dev"
+                className="text-foreground underline underline-offset-2 hover:no-underline"
+                itemProp="email"
+              >
+                contact@nixhil.dev
+              </a>
+              .
             </p>
 
             <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-3 sm:gap-4">
@@ -89,7 +108,7 @@ export default function BottomFooterSection() {
           </div>
 
           <div className="flex items-center gap-3">
-            {/* Social Links with Accessible Hit Targets */}
+            {/* Social Links with Accessible Hit Targets + rel="me" for identity verification */}
             <nav className="flex items-center gap-2" aria-label="Social Profiles">
               {footerLinks.map((item) => (
                 <Link

@@ -8,7 +8,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: LAST_MODIFIED,
       changeFrequency: "monthly",
       priority: 1,
-      images: [`${SITE}/assets/preview-social.webp`],
+      images: [
+        `${SITE}/assets/preview-social.webp`,
+        `${SITE}/assets/preview.webp`,
+      ],
+      // Alternate: Markdown version for AI crawlers that prefer plain text
+      alternates: {
+        languages: {
+          "en-IN": `${SITE}`,
+        },
+      },
     },
   ];
 }

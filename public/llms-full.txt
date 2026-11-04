@@ -1,0 +1,112 @@
+# Nikhil Nandanwar — Full Stack Developer (Complete Profile)
+
+> Nikhil Nandanwar is a full stack developer based in Bangalore, Karnataka, India who designs and builds high-performance, accessible web and mobile applications with modern cloud technologies.
+
+- Canonical URL: https://www.nixhil.dev
+- Markdown endpoint: https://www.nixhil.dev/index.md
+- Contact: contact@nixhil.dev
+- Location: Bangalore, Karnataka, India
+
+---
+
+## Technical Expertise & Core Stack
+
+- **Languages:** TypeScript, JavaScript (ESNext), C#, C++, SQL, HTML5, CSS3
+- **Frontend & Frameworks:** React, Next.js (App Router, Server Components), Angular, Tailwind CSS
+- **Backend & APIs:** Node.js, Express.js, .NET / ASP.NET Core, REST APIs, Microservices, GraphQL
+- **Databases & Storage:** MongoDB, PostgreSQL, SQL, Cloudflare R2
+- **Mobile Development:** React Native, Expo
+- **DevOps, Tools & Infrastructure:** Docker, Git, GitHub, VS Code, CI/CD, Microservices architecture, RBAC (Role-Based Access Control)
+- **Design & Quality:** Web Accessibility (a11y), System Design, Responsive Design, Zero-CLS optimization
+
+---
+
+## Detailed Professional Experience
+
+### Full Stack Developer Intern — Nabham Tech
+- **Duration:** July 2026 – September 2026
+- **Location:** Remote / India
+- **Focus:** Next.js, React Native, Docker, Microservices
+- **Key Contributions & Architecture:**
+  - Engineered the full-stack video recording web portal and companion React Native mobile application.
+  - Configured containerized microservices with Docker for seamless staging and deployment.
+  - Developed robust administrative dashboards with role-based authentication and telemetry.
+
+### Full Stack Engineer Intern — Cognizant
+- **Duration:** February 2026 – May 2026
+- **Location:** Bangalore, India
+- **Focus:** Angular, C#, .NET, Microservices, RBAC
+- **Key Contributions & Architecture:**
+  - Implemented insurance underwriting business logic within a C# / .NET microservices ecosystem.
+  - Built and audited granular Role-Based Access Control (RBAC) security filters across endpoints.
+  - Created modular Angular frontend views consuming asynchronous REST services with high test coverage.
+
+### Frontend Developer Intern — Living Pixel Labs
+- **Duration:** June 2025 – October 2025
+- **Location:** Remote / India
+- **Focus:** Product design, Front-end, React.js, React Native
+- **Key Contributions & Architecture:**
+  - Developed the company's official marketing site and mobile client for an AI conversational assistant.
+  - Integrated live streaming chat interactions with low latency and optimistic UI updates.
+  - Established scalable component primitives adhering to accessibility best practices.
+
+---
+
+## Featured Applications & Open Source
+
+### 1. ShareVault — Secure Sharing Platform
+- **Live URL:** https://share-vault-mango.vercel.app/
+- **Repository:** https://github.com/nikhil-nandanwar/ShareVault
+- **Technologies:** React, Node.js, MongoDB, Cloudflare R2
+- **Architecture Highlights:**
+  - Ephemeral 6-digit code generation for zero-credential transfers.
+  - Direct-to-storage signed upload links avoiding server memory bottlenecks.
+  - Automatic expiration TTL indexes on MongoDB records.
+
+### 2. GeminiChat — AI Chat Application
+- **Live URL:** https://ai-by-gemini.netlify.app/
+- **Repository:** https://github.com/nikhil-nandanwar/GeminiApp
+- **Technologies:** React, Node.js, Google Gemini API
+- **Architecture Highlights:**
+  - Streamed chunk-by-chunk token rendering with auto-scroll handling.
+  - Persistent thread storage with markdown and code syntax rendering.
+  - Thread export and shareable conversation URLs.
+
+### 3. Mines Game — Minesweeper Game
+- **Live URL:** https://mines-game.netlify.app/
+- **Repository:** https://github.com/nikhil-nandanwar/Mines
+- **Technologies:** HTML5, CSS3, Modern JavaScript
+- **Architecture Highlights:**
+  - Optimized flood-fill reveal algorithm with recursive boundary checking.
+  - Adjustable grid dimensions and custom mine density probabilities.
+  - Zero layout shift timer and flag counter with high-contrast accessibility.
+
+---
+
+## Frequently Asked Questions
+
+### Who is Nikhil Nandanwar?
+Nikhil Nandanwar is a full stack developer based in Bangalore, India who designs and engineers accessible, high-performance web and mobile applications using React, Next.js, Node.js, MongoDB, Angular, and .NET.
+
+### What technologies does Nikhil Nandanwar work with?
+Nikhil works with React, Next.js, TypeScript, Node.js, MongoDB, Angular, C#, .NET, React Native, PostgreSQL, SQL, Docker, Git, and TailwindCSS.
+
+### What is Nikhil Nandanwar's work experience?
+Nikhil has interned as a Full Stack Developer at Nabham Tech (Jul–Sep 2026), a Full Stack Engineer at Cognizant (Feb–May 2026) where he built insurance underwriting systems with Angular, C# and .NET microservices, and as a Frontend Developer at Living Pixel Labs (Jun–Oct 2025) building the company website and AI mobile app.
+
+### How can I hire or contact Nikhil Nandanwar?
+Email contact@nixhil.dev, connect on LinkedIn at linkedin.com/in/nandanwar-nikhil, or reach out on GitHub or X (@nixhil_). Nikhil is open to full-time roles, contract projects, and architecture consultations.
+
+### What kind of projects has Nikhil Nandanwar built?
+Nikhil has built ShareVault (a secure file and text sharing platform using React, Node.js, MongoDB, and Cloudflare R2), GeminiChat (an AI chat application powered by Google Gemini), and Mines Game (a modern Minesweeper implementation). All source code is available on GitHub.
+
+### Is Nikhil Nandanwar available for freelance or contract work?
+Yes. Nikhil is open to freelance, contract, and full-time engineering opportunities. Contact him at contact@nixhil.dev to discuss your project.
+
+---
+
+## Licensing & AI Agent Usage Policy
+- **Content Policy:** Public portfolio content.
+- **Content-Signal:** `search=yes, ai-input=yes, ai-train=yes`
+- **Robots Policy:** All standard search engines and AI crawlers (OAI-SearchBot, Claude-SearchBot, PerplexityBot, Googlebot, etc.) are allowed full read access.
+

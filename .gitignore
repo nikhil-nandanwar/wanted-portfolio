@@ -24,6 +24,8 @@ data/skills/
 
 # misc
 .DS_Store
+Thumbs.db
+Desktop.ini
 *.pem
 
 # debug
@@ -31,12 +33,24 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+*.log
 
 # env files (can opt-in for committing if needed)
 .env*
 
 # vercel
-.vercel
+/.vercel/
+
+# local tools and caches
+/.cache/
+/.turbo/
+/.eslintcache
+/.stylelintcache
+/.parcel-cache/
+
+# editor files
+/.idea/
+/.history/
 
 # typescript
 *.tsbuildinfo
