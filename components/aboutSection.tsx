@@ -21,7 +21,7 @@ export default function AboutSection() {
             <p className="text-lg xs:text-xl sm:text-2xl font-bold leading-snug tracking-tight text-foreground text-balance">
               I believe great software is built at the intersection of robust architecture, strict accessibility, and deliberate design.
             </p>
-            <div className="mt-6 sm:mt-8 space-y-2.5 border-l-2 border-accent pl-4 text-xs sm:text-sm font-medium text-muted">
+            <div className="sr-only mt-6 sm:mt-8 space-y-2.5 border-l-2 border-accent pl-4 text-xs sm:text-sm font-medium text-muted">
               <p>
                 <span className="font-semibold text-foreground">Location:</span>{" "}
                 Bangalore, Karnataka, India
