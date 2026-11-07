@@ -21,7 +21,7 @@ export default function BottomFooterSection() {
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
     } catch {
-      // Fallback
+      window.location.href = "mailto:contact@nixhil.dev";
     }
   };
 
