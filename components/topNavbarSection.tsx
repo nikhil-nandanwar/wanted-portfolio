@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 const navLinks = [
   { id: "top", label: "Home", href: "#top" },
@@ -15,27 +16,18 @@ const navLinks = [
 export default function TopNavbarSection() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("top");
-  const [theme, setTheme] = useState<"system" | "light" | "dark">("system");
   const [scrolled, setScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme, setTheme } = useTheme();
 
-  // Initialize theme
   useEffect(() => {
-    const saved = localStorage.getItem("theme") as "system" | "light" | "dark" | null;
-    if (saved) {
-      setTheme(saved);
-      if (saved === "system") {
-        document.documentElement.removeAttribute("data-theme");
-      } else {
-        document.documentElement.setAttribute("data-theme", saved);
-      }
-    }
+    setMounted(true);
   }, []);
 
+  const isDark = mounted && resolvedTheme === "dark";
+
   const toggleTheme = () => {
-    const nextTheme = theme === "dark" ? "light" : "dark";
-    setTheme(nextTheme);
-    localStorage.setItem("theme", nextTheme);
-    document.documentElement.setAttribute("data-theme", nextTheme);
+    setTheme(isDark ? "light" : "dark");
   };
 
   // Scroll detection & Active Section Spy
@@ -138,10 +130,10 @@ export default function TopNavbarSection() {
             type="button"
             onClick={toggleTheme}
             className="btn-press flex size-9 items-center justify-center border border-border text-foreground hover:bg-foreground/5"
-            aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
-            title={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
+            aria-label={`Switch to ${isDark ? "light" : "dark"} theme`}
+            title={`Switch to ${isDark ? "light" : "dark"} theme`}
           >
-            {theme === "dark" ? (
+            {isDark ? (
               <svg className="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
               </svg>
@@ -170,9 +162,9 @@ export default function TopNavbarSection() {
             type="button"
             onClick={toggleTheme}
             className="btn-press flex size-10 items-center justify-center border border-border text-foreground hover:bg-foreground/5"
-            aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
+            aria-label={`Switch to ${isDark ? "light" : "dark"} theme`}
           >
-            {theme === "dark" ? (
+            {isDark ? (
               <svg className="size-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
               </svg>
