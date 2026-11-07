@@ -31,7 +31,7 @@ export default function TopHeroSection() {
           I&apos;m{" "}
           <strong className="text-foreground font-semibold">Nikhil Nandanwar</strong>,
           a full stack developer based in{" "}
-          <strong className="text-foreground font-semibold">Bangalore, India</strong>.
+          <strong className="text-foreground font-semibold"> India</strong>.
           I engineer end-to-end web and mobile applications with React, Next.js, Node.js, and .NET —
           focusing on high performance, thorough accessibility, and clean systems architecture.
         </p>
