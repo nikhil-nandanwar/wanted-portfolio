@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const navLinks = [
   { id: "top", label: "Home", href: "#top" },
-  { id: "projects", label: "Work", href: "#projects" },
+  { id: "projects", label: "Projects", href: "#projects" },
   { id: "skills", label: "Skills", href: "#skills" },
   { id: "experience", label: "Experience", href: "#experience" },
   { id: "about", label: "About", href: "#about" },
