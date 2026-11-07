@@ -64,13 +64,6 @@ export default function TopHeroSection() {
           focusing on high performance, thorough accessibility, and clean systems architecture.
         </p>
 
-        {/* Live IST time — signals freshness to crawlers */}
-        {istTime && (
-          <p className="mt-3 text-xs text-muted tabular-nums" aria-label="Current time in Bangalore">
-            <span aria-hidden="true">🕐 </span>Bangalore time: <time dateTime={new Date().toISOString()}>{istTime}</time>
-          </p>
-        )}
-
         {/* Interactive Responsive Action Buttons */}
         <div className="mt-8 sm:mt-10 flex w-full flex-col sm:flex-row sm:w-auto sm:flex-wrap items-stretch sm:items-center gap-3 sm:gap-4">
           <Link
